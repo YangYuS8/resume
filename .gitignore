@@ -1,0 +1,22 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.xdv
+
+# Local build output
+*.dvi
+*.ps
+
+# Keep the generated resume PDF tracked if desired
+# !resume.pdf

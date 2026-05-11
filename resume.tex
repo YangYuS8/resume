@@ -1,0 +1,99 @@
+\documentclass[10pt,a4paper,fontset=none]{ctexart}
+
+\usepackage[margin=1.45cm]{geometry}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage[colorlinks=true,urlcolor=black,linkcolor=black]{hyperref}
+\usepackage{tabularx}
+\usepackage{titlesec}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlist[itemize]{leftmargin=1.5em,itemsep=1pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+\setlength{\tabcolsep}{0pt}
+
+\setmainfont{Noto Sans}
+\setsansfont{Noto Sans}
+\setmonofont{Noto Sans Mono}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans CJK SC}
+
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+\newcommand{\resumeSection}[1]{
+  \section*{#1}
+  \vspace{-0.4em}\hrule\vspace{0.3em}
+}
+
+\newcommand{\entryHeading}[3]{
+  \textbf{#1} \hfill #2 \\
+  {\small #3}\par
+}
+
+\begin{document}
+
+{\LARGE\bfseries 杨栋森} \hfill {\normalsize 求职方向：SRE / DevOps / TechOps 实习}
+
+\vspace{0.25em}
+{\small
+电话：\texttt{[待补充]} \quad
+邮箱：\href{mailto:[your-email@example.com]}{\texttt{[your-email@example.com]}} \\
+GitHub：\href{https://github.com/YangYuS8}{github.com/YangYuS8} \quad
+博客：\href{https://blog.yangyus8.top}{blog.yangyus8.top}\par
+}
+
+\resumeSection{技术摘要}
+围绕 Linux 环境使用、服务部署与故障排查积累了持续实践，具备容器化部署、虚拟化环境运维与内网服务访问配置经验。参与过真实开源项目协作，能够阅读代码结构、定位问题并通过 Pull Request 提交修改；同时在本地环境持续进行 Kubernetes 与云原生相关学习实验。
+
+\resumeSection{教育背景}
+\entryHeading{[学校名称待补充] \quad 本科在读}{[预计毕业时间待补充]}{计算机相关专业 \quad 2027 届}
+
+\resumeSection{技术栈}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{0.2\textwidth}X@{}}
+Linux 与系统运维 & Arch Linux、Fedora、Debian、Ubuntu、CachyOS、Manjaro、EndeavourOS、Linux Mint；熟悉 systemd、软件包管理、驱动安装、环境配置、Shell 基础与常见服务排错。 \\
+容器与服务部署 & Docker、Docker Compose、Nginx、Caddy、1Panel；具备静态站点托管、反向代理、HTTPS 配置、日志查看以及端口暴露和服务访问排查经验。 \\
+虚拟化与远程访问 & Proxmox VE（PVE）、VM、LXC、Tailscale、WireGuard、Headscale；实践过内网服务访问、远程访问网络配置与多节点环境管理。 \\
+开发与工程工具 & Git、GitHub、GitHub Actions、Python 环境管理（conda / venv / uv）、Node.js、pnpm、Go、Rust。 \\
+云原生与监控（学习中） & Kubernetes / k3s、kubectl、Prometheus、Grafana、ELK / EFK、Ansible、Terraform；目前以本地实验和基础运维操作练习为主。 \\
+\end{tabularx}
+
+\resumeSection{项目与经历}
+
+\entryHeading{TencentCloud / CubeSandbox 开源贡献}{GitHub 开源协作}{\href{https://github.com/TencentCloud/CubeSandbox}{github.com/TencentCloud/CubeSandbox}}
+\begin{itemize}
+  \item 参与 TencentCloud / CubeSandbox 开源项目贡献，围绕 sandbox、container runtime、CLI、模板镜像与 Docker 流程阅读代码结构，并结合 issue 定位 CubeAPI、CubeMaster 等模块中的具体问题。
+  \item 在已合并 PR \#70 中调整创建流程的错误映射逻辑，将缺失 sandbox template 的场景映射为明确的 bad request，避免接口返回行为与实际输入问题不一致。
+  \item 在已合并 PR \#98、\#146 中补充 `dns` 相关 CLI 参数支持，并将模板镜像创建观察输出改为更清晰的分阶段展示，便于跟踪任务状态和排查执行过程。
+  \item 在已合并 PR \#101 中优化模板镜像准备流程，当源镜像已存在于本地时跳过不必要的 Docker pull，减少重复操作并贴近实际部署环境的镜像使用方式。
+  \item 通过 GitHub Pull Request 参与开源协作，结合 Go / Rust 相关构建与测试流程对修改进行验证，积累了在真实项目中阅读代码、提交修复和讨论实现细节的经验。
+\end{itemize}
+
+\entryHeading{个人 Homelab 与虚拟化运维实践}{长期实践}{Proxmox VE / Docker / Tailscale}
+\begin{itemize}
+  \item 使用 Proxmox VE 在个人服务器上搭建虚拟化环境，宿主机配置为 i7-8700、64 GB RAM，运行多台 VM 与 LXC，用于承载 Linux 系统实验、服务部署和网络访问测试。
+  \item 在 VM / LXC 中部署多个 Docker 服务，负责系统安装、基础环境配置、反向代理、HTTPS 证书接入与服务维护，持续积累从系统层到应用层的运维实践。
+  \item 使用 Nginx、Caddy、Tailscale、Headscale 管理内网服务访问与远程接入，处理端口暴露、反向代理转发、域名解析和内外网访问路径差异带来的问题。
+  \item 围绕服务不可达、代理链路异常、日志报错、系统配置冲突等问题进行排查，形成了从网络、进程、端口、配置到日志逐层定位的排障习惯。
+\end{itemize}
+
+\entryHeading{LWE Linux 动态壁纸项目}{个人项目}{\href{https://github.com/YangYuS8/lwe}{github.com/YangYuS8/lwe}}
+\begin{itemize}
+  \item 使用 Tauri 2、Rust、Svelte 开发面向 Linux 桌面的动态壁纸应用，关注桌面环境差异、应用行为与系统集成，而非将其实现为普通 Web 前端项目。
+  \item 围绕 Linux 桌面应用工程化处理构建、打包与发布流程，实践 AppImage 分发与 AUR 打包，提升对 Linux 应用交付方式的理解。
+  \item 使用 GitHub Actions 自动化构建与发布流程，减少手动打包步骤，并为后续版本分发提供可复用的工程基础。
+  \item 在项目实现中结合 Rust 与 Tauri 生态处理桌面应用逻辑，持续关注跨桌面环境适配和 Linux 用户实际安装体验。
+\end{itemize}
+
+\entryHeading{k3s / Kubernetes 学习实验}{学习实验}{本地 / LXC 环境}
+\begin{itemize}
+  \item 在本地或 LXC 环境中搭建 k3s / Kubernetes 学习实验，练习 `kubectl` 对 deployment、service、rollout、scale、history、undo 等常见对象和操作的使用。
+  \item 围绕 `ErrImagePull`、Docker Hub TLS timeout、代理配置与 container registry 访问异常进行排查，理解镜像拉取失败背后的网络与配置因素。
+  \item 结合已有 Docker Compose 使用经验，对比理解从单机容器编排到 Kubernetes 对象模型的迁移思路，当前仍以基础实验和操作熟悉为主。
+\end{itemize}
+
+\end{document}
