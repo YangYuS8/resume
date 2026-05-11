@@ -35,6 +35,27 @@ latexmk -xelatex resume.tex
 
 成功后会生成 `resume.pdf`。
 
+## 在线简历 / GitHub Pages
+
+在线简历地址：
+
+- `https://yangyus8.top/resume/`
+
+本地编译方式：
+
+```bash
+make
+```
+
+GitHub Actions 自动部署说明：
+
+- push 到 `main` 分支后会自动重新编译 `resume.tex` 并发布到 GitHub Pages。
+- 也支持在 Actions 页面手动触发 `workflow_dispatch`。
+
+如果首次使用 GitHub Pages，请在仓库设置中确认：
+
+- `Settings -> Pages -> Build and deployment -> Source` 选择 `GitHub Actions`
+
 ## 清理
 
 清理中间文件：
