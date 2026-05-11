@@ -1,18 +1,21 @@
 \documentclass[10pt,a4paper,fontset=none]{ctexart}
 
-\usepackage[margin=1.18cm]{geometry}
-\usepackage{array}
+\usepackage[margin=1.12cm]{geometry}
 \usepackage{enumitem}
 \usepackage{fontspec}
 \usepackage{xeCJK}
+\usepackage{xcolor}
 \usepackage[colorlinks=true,urlcolor=black,linkcolor=black]{hyperref}
 \usepackage{tabularx}
 \usepackage{titlesec}
 
+\definecolor{sectiongray}{HTML}{3F3F46}
+\definecolor{rulegray}{HTML}{A1A1AA}
+
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{1pt}
-\setlist[itemize]{leftmargin=1.3em,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+\setlength{\parskip}{0.5pt}
+\setlist[itemize]{leftmargin=1.35em,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt}
 \setlength{\tabcolsep}{0pt}
 
 \setmainfont{Noto Sans}
@@ -22,61 +25,76 @@
 \setCJKsansfont{Noto Sans CJK SC}
 \setCJKmonofont{Noto Sans CJK SC}
 
-\titleformat{\section}{\large\bfseries}{}{0pt}{}
-\titlespacing*{\section}{0pt}{5pt}{2pt}
+\titleformat{\section}{\color{sectiongray}\bfseries\normalsize}{}{0pt}{}
+\titlespacing*{\section}{0pt}{4pt}{2pt}
 
-\newcommand{\resumeSection}[1]{
-  \section*{#1}
-  \vspace{-0.45em}\hrule\vspace{0.15em}
+\newcommand{\resumeSection}[1]{%
+  \section*{#1}%
+  \vspace{-0.35em}{\color{rulegray}\hrule height 0.5pt}\vspace{0.2em}%
 }
 
-\newcommand{\entryHeading}[3]{
-  \textbf{#1} \hfill {\small #2} \\
-  {\small #3}\vspace{-0.2em}\par
+\newcommand{\resumeSubheading}[2]{%
+  \textbf{#1} \hfill {\small #2}\par
 }
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeItem}[1]{\item {\small #1}}
 
 \begin{document}
 
-{\LARGE\bfseries 杨栋森} \hfill {\normalsize 求职方向：SRE / DevOps / TechOps 实习}
-
-\vspace{0.15em}
-{\small
-电话：\texttt{[待补充]} \quad
-邮箱：\href{mailto:[your-email@example.com]}{\texttt{[your-email@example.com]}} \\
-GitHub：\href{https://github.com/YangYuS8}{github.com/YangYuS8} \quad
-博客：\href{https://blog.yangyus8.top}{blog.yangyus8.top}\par
+{\centering
+  {\fontsize{18}{20}\selectfont\bfseries 杨栋森\par}
+  \vspace{0.15em}
+  {\normalsize Linux 运维 / DevOps / SRE / 平台方向实习\par}
+  \vspace{0.2em}
+  {\small CET4 \enspace|\enspace \href{mailto:YangYuS8@163.com}{YangYuS8@163.com} \enspace|\enspace 18683236881 \enspace|\enspace 四川省成都市 \enspace|\enspace \href{https://github.com/YangYuS8}{GitHub} \enspace|\enspace \href{https://blog.yangyus8.top}{Blog}\par}
 }
 
 \resumeSection{教育背景}
-{\small [学校名称待补充] ｜ 计算机相关专业，本科在读 ｜ 2027 届}
+\resumeSubheading{辽宁科技大学 ｜ 网络工程，本科}{2023.09 - 2027.07}
+{\small 主修：计算机网络、操作系统、数据结构、数据库系统、信息安全}
 
 \resumeSection{技术栈}
 {\small
-\textbf{Linux / Infra:} Arch、Fedora、Debian、Ubuntu、systemd、Docker、Docker Compose、Nginx、Caddy、Proxmox VE、LXC、Tailscale、Headscale \\
-\textbf{DevOps / Cloud Native:} k3s/Kubernetes、kubectl、Prometheus、Grafana、ELK/EFK、Ansible、Terraform（部分学习中） \\
-\textbf{Development:} Go、Rust、Python、Shell、Git、GitHub Actions、Node.js、pnpm、uv
+\textbf{Linux / Infra：} Arch、Fedora、Debian、Ubuntu、systemd、Docker、Docker Compose、Nginx、Caddy、Proxmox VE、LXC、Tailscale、Headscale \\
+\textbf{DevOps / Cloud Native：} k3s/Kubernetes、kubectl、Prometheus、Grafana、ELK/EFK、Ansible、Terraform（部分学习中） \\
+\textbf{Development：} Go、Rust、Python、Shell、Git、GitHub Actions、Node.js、pnpm、uv、FastAPI
 }
 
-\resumeSection{项目与经历}
+\resumeSection{开源贡献}
+\resumeSubheading{TencentCloud / CubeSandbox 开源贡献}{GitHub PR / Go / Rust / Docker}
+\resumeItemListStart
+  \resumeItem{参与 TencentCloud/CubeSandbox 开源项目贡献，围绕 CubeAPI、CubeMaster、cubemastercli 提交并合并多个 PR（\#70、\#98、\#101、\#146），涉及 CLI、模板镜像、Docker 流程与错误处理。}
+  \resumeItem{为模板创建命令增加可重复传入的 `--dns` 参数，并将 DNS 配置传递到模板容器配置；同时修复缺失 sandbox template 时的 API 错误映射。}
+  \resumeItem{优化模板镜像准备与观察流程：本地已有源镜像时跳过 docker pull，并将 `tpl watch` 输出调整为阶段化状态展示，便于跟踪构建进度与排查问题。}
+\resumeItemListEnd
 
-\entryHeading{TencentCloud / CubeSandbox 开源贡献}{GitHub 开源协作}{\href{https://github.com/TencentCloud/CubeSandbox}{github.com/TencentCloud/CubeSandbox}}
-\begin{itemize}
-  \item 参与 TencentCloud/CubeSandbox 开源项目贡献，围绕 CubeAPI、CubeMaster、cubemastercli 提交并合并多个 PR（\#70、\#98、\#101、\#146），涉及 CLI、模板镜像、Docker 流程与错误处理。
-  \item 为模板创建命令增加可重复传入的 `--dns` 参数，并将 DNS 配置传递到模板容器配置；同时修复缺失 sandbox template 时的 API 错误映射。
-  \item 优化模板镜像准备与观察流程：本地已有源镜像时跳过 docker pull，并将 `tpl watch` 输出调整为阶段化状态展示，便于跟踪构建进度与排查问题。
-\end{itemize}
+\resumeSection{运维与平台实践}
+\resumeSubheading{Linux 运维与 Homelab 实践}{Ubuntu Server / PVE / Docker / Tailscale}
+\resumeItemListStart
+  \resumeItem{协助完成实验室 Ubuntu 22 服务器部署与维护，参与基础环境配置、运行支持、Python 深度学习环境搭建及依赖问题处理。}
+  \resumeItem{基于 Proxmox VE 在 i7-8700 / 64 GB RAM 宿主机上运行多台 VM、LXC 与 Docker 服务，用于系统实验、服务部署和网络访问测试。}
+  \resumeItem{使用 Docker Compose、Nginx、Caddy、Tailscale / Headscale / WireGuard 部署和暴露自托管服务，处理反向代理、HTTPS、端口映射、代理链路和服务不可达等问题。}
+\resumeItemListEnd
 
-\entryHeading{个人 Homelab 与虚拟化运维实践}{长期实践}{Proxmox VE / Docker / Tailscale}
-\begin{itemize}
-  \item 基于 Proxmox VE 搭建个人虚拟化环境，在 i7-8700 / 64 GB RAM 宿主机上运行多台 VM、LXC 与 Docker 服务，用于 Linux 系统实验、服务部署和网络访问测试。
-  \item 使用 Docker Compose、Nginx、Caddy 部署和暴露自托管服务，处理反向代理、HTTPS、端口映射、日志排查和服务不可达等问题。
-  \item 使用 Tailscale / Headscale / WireGuard 管理远程访问网络，并在 k3s 实验中排查过 `ErrImagePull`、镜像仓库访问、代理配置等容器网络问题。
-\end{itemize}
+\resumeSection{项目经历}
+\resumeSubheading{YOLO 害虫检测平台}{Docker / Python / FastAPI / YOLOv12 / Redis / React}
+\resumeItemListStart
+  \resumeItem{面向目标检测场景参与 Web 平台搭建，负责模型服务与 Web 服务的本地运行、测试、前后端联调及基础功能验证。}
+  \resumeItem{使用 Docker 整理项目运行环境，处理 Linux 环境配置、依赖安装、服务启动排查等问题，协助形成可演示的平台成果和软著申请材料。}
+\resumeItemListEnd
 
-\entryHeading{LWE Linux 动态壁纸项目}{个人项目}{\href{https://github.com/YangYuS8/lwe}{github.com/YangYuS8/lwe}}
-\begin{itemize}
-  \item 使用 Tauri 2、Rust、Svelte 开发 Linux 动态壁纸应用，关注桌面环境差异、系统集成和 Linux 用户侧安装体验。
-  \item 实践 AppImage、AUR 与 GitHub Actions 自动化构建发布流程，整理 Linux 桌面应用的打包与分发链路。
-\end{itemize}
+\resumeSubheading{LWE Linux 动态壁纸项目}{Rust / Tauri 2 / Svelte / GitHub 106\ensuremath{\star}}
+\resumeItemListStart
+  \resumeItem{使用 Tauri 2、Rust、Svelte 开发 Linux 动态壁纸应用，关注桌面环境差异、系统集成和 Linux 用户侧安装体验。}
+  \resumeItem{实践 AppImage、AUR 与 GitHub Actions 自动化构建发布流程，整理 Linux 桌面应用的打包与分发链路。}
+\resumeItemListEnd
+
+\resumeSection{论文与奖项}
+{\small
+\textbf{论文：} Steel Surface Defect Detection Based on YOLOv12，Engineering Letters，2025，主要作者之一，负责实验环境部署、运行优化与部分数据处理；DLFE-YOLO: an enhanced framework for underwater object detection based on YOLOv8，Intelligent Marine Technology and Systems，2025，主要作者之一，负责实验环境部署与运行优化。 \\
+\textbf{奖项：} 第三届中国高校大数据挑战赛国家级三等奖；第六届全球校园人工智能算法精英大赛全国总决赛国家级三等奖；辽宁科技大学优秀学生三等奖学金。
+}
 
 \end{document}
