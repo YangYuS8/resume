@@ -33,12 +33,17 @@ jobs:
           fc-match "Noto Sans"
           fc-match "Noto Sans CJK SC"
 
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            latexmk \
+            texlive-xetex \
+            texlive-lang-chinese \
+            texlive-latex-extra
+
       - name: Compile LaTeX resume
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: resume.tex
-          latexmk_use_xelatex: true
-          args: -file-line-error -interaction=nonstopmode
+        run: latexmk -xelatex -file-line-error -interaction=nonstopmode resume.tex
 
       - name: Prepare Pages artifact
         run: |
