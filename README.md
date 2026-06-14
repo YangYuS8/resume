@@ -21,6 +21,21 @@ python -m http.server 8000 -d site
 http://127.0.0.1:8000
 ```
 
+## 部署与同步
+
+仓库当前配置了三条发布链路：
+
+- **GitHub Pages**：`.github/workflows/deploy.yml` 将 `site/` 发布到 GitHub Pages。
+- **CNB 同步**：GitHub Actions 在 Pages 发布成功后，将 `main` 强制同步到 `https://cnb.cool/Nesoriel/YangYuS8/resume`。
+- **EdgeOne Pages**：`.cnb.yml` 在 CNB push 后校验静态文件，并用 `tencentcom/deploy-eopages` 发布 `site/`。
+
+在 Hermes / agent 沙箱里查询 CNB 登录态或流水线时，显式使用真实用户 HOME，避免读不到 CNB CLI 登录信息：
+
+```bash
+HOME=/home/yangyus8 cnb status
+HOME=/home/yangyus8 cnb build get-build-logs --repo Nesoriel/YangYuS8/resume --page-size 10 --verbose
+```
+
 ## 投递前待补充
 
 - 竞赛经历与获奖证书的正式名称、级别、时间。
