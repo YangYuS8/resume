@@ -52,11 +52,15 @@ code {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 24px;
-  align-items: end;
+  grid-template-columns: 1fr 132px;
+  gap: 28px;
+  align-items: center;
   padding: 30px 34px;
   margin-bottom: 18px;
+}
+
+.hero-main {
+  min-width: 0;
 }
 
 .eyebrow {
@@ -81,10 +85,27 @@ code {
 }
 
 .contact {
-  display: grid;
-  gap: 6px;
-  justify-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 16px;
   font-size: 14px;
+}
+
+.portrait {
+  margin: 0;
+  justify-self: end;
+}
+
+.portrait img {
+  display: block;
+  width: 118px;
+  height: 158px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
 .section {
@@ -196,7 +217,16 @@ li {
   }
 
   .contact {
-    justify-items: start;
+    justify-content: flex-start;
+  }
+
+  .portrait {
+    justify-self: start;
+  }
+
+  .portrait img {
+    width: 96px;
+    height: 128px;
   }
 
   .item-head {

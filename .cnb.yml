@@ -1,0 +1,34 @@
+main:
+  push:
+    - name: deploy-edgeone-pages
+      runner:
+        cpus: 16
+      docker:
+        image: cnbcool/default-build-env:latest
+      imports:
+        - https://cnb.cool/Nesoriel/secret-prod/-/blob/main/cloud-providers/tencent-cloud.yml
+      lock:
+        key: resume-edgeone-pages
+        wait: true
+        cancel-in-progress: true
+      stages:
+        - name: validate static resume site
+          script: |
+            set -euo pipefail
+            test -f site/index.html
+            test -f site/styles.css
+            test -f site/assets/avatar.png
+            python3 - <<'PY'
+            from html.parser import HTMLParser
+            from pathlib import Path
+            HTMLParser().feed(Path('site/index.html').read_text(encoding='utf-8'))
+            print('site html ok')
+            PY
+
+        - name: deploy resume to EdgeOne Pages
+          image: tencentcom/deploy-eopages:latest
+          if: '[ -n "${EDGEONE_PAGES_API_TOKEN:-}" ]'
+          settings:
+            project_name: resume
+            api_token: $EDGEONE_PAGES_API_TOKEN
+            directory: site
