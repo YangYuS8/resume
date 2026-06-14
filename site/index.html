@@ -3,44 +3,140 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>杨栋森 - 在线简历</title>
+    <title>杨栋森 - 运维 / DevOps / 云原生实习简历</title>
     <meta
       name="description"
-      content="杨栋森的在线技术简历，面向 Linux 运维、DevOps、SRE、平台方向实习岗位。"
+      content="杨栋森的中文技术简历，面向运维、DevOps、云原生、SRE、平台工程实习岗位。"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="page">
-      <section class="hero card">
-        <p class="eyebrow">在线简历</p>
-        <h1>杨栋森</h1>
-        <p class="subtitle">Linux 运维 / DevOps / SRE / 平台方向实习</p>
-        <div class="links">
-          <a href="https://github.com/YangYuS8" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://blog.yangyus8.top" target="_blank" rel="noreferrer">Blog</a>
-          <a class="button" href="resume.pdf" download>下载 PDF</a>
+      <header class="hero card">
+        <div>
+          <p class="eyebrow">中文简历</p>
+          <h1>杨栋森</h1>
+          <p class="subtitle">运维 / DevOps / 云原生 / SRE / 平台工程实习生</p>
         </div>
+        <div class="contact">
+          <a href="tel:18683236881">18683236881</a>
+          <a href="mailto:yangyus8@163.com">yangyus8@163.com</a>
+          <a href="https://github.com/YangYuS8" target="_blank" rel="noreferrer">GitHub: YangYuS8</a>
+          <a href="https://blog.yangyus8.top" target="_blank" rel="noreferrer">blog.yangyus8.top</a>
+        </div>
+      </header>
+
+      <section class="card section">
+        <h2>个人简介</h2>
+        <p>
+          辽宁科技大学网络工程专业 2027 届本科生，关注 Linux 运维、DevOps、云原生与平台工程方向。
+          熟悉 Linux 日常使用与故障排查，具备 Docker/Podman、Kubernetes、CI/CD、Nginx、Redis、MySQL/MariaDB、Prometheus 等工具的项目实践经验。
+          能够借助 AI Agents 提升工程交付效率，同时持续补足 Go、Shell、系统网络与云原生基础能力，适合从运维开发、平台工具、云原生基础设施等方向切入实习工作。
+        </p>
       </section>
 
-      <section class="viewer card">
-        <div class="viewer-header">
-          <h2>PDF 预览</h2>
-          <a href="resume.pdf" target="_blank" rel="noreferrer">新窗口打开</a>
-        </div>
-
-        <object data="resume.pdf" type="application/pdf" class="pdf-frame">
-          <iframe src="resume.pdf" class="pdf-frame" title="杨栋森在线简历 PDF 预览"></iframe>
-          <div class="fallback">
-            <p>当前浏览器不支持直接预览 PDF。</p>
-            <a class="button" href="resume.pdf" download>下载简历 PDF</a>
+      <section class="grid two">
+        <div class="card section">
+          <h2>教育经历</h2>
+          <div class="item compact">
+            <div class="item-head"><strong>辽宁科技大学</strong><span>2023.09 - 2027.07</span></div>
+            <p>网络工程｜本科｜2027 届</p>
+            <p>校三等奖学金｜CET-4</p>
           </div>
-        </object>
+        </div>
+        <div class="card section">
+          <h2>求职方向</h2>
+          <p>运维 / DevOps / 云原生 / SRE / 平台工程实习</p>
+          <p class="muted">希望从基础设施、自动化运维、平台工具和云原生工程实践方向成长。</p>
+        </div>
       </section>
 
-      <footer class="footer">
-        <p>本页面由 GitHub Pages 自动部署，PDF 每次推送到 main 分支后重新编译生成。</p>
-      </footer>
+      <section class="card section">
+        <h2>技术能力</h2>
+        <ul class="skills">
+          <li><strong>操作系统与运维：</strong>Linux、systemd、SSH、日志排查、服务部署、反向代理、网络诊断</li>
+          <li><strong>云原生与容器：</strong>Kubernetes、CRD/Controller、Docker/Podman、Docker Compose、Helm、RBAC、Prometheus Metrics</li>
+          <li><strong>后端开发：</strong>Go、Gin、Gorm、RESTful API、JWT、PHP Laravel、Python FastAPI</li>
+          <li><strong>数据库与中间件：</strong>MySQL/MariaDB、SQLite、Redis</li>
+          <li><strong>前端与工程化：</strong>Vue 3、React、TypeScript、Vite、ECharts、pnpm、Git、GitHub Actions、Makefile</li>
+          <li><strong>AI 辅助工程：</strong>使用 Claude Code、Codex/OpenCode、Antigravity/Gemini 等 Agents 辅助需求拆解、代码审查、文档生成与自动化验证</li>
+        </ul>
+      </section>
+
+      <section class="card section">
+        <h2>项目经历</h2>
+        <article class="item">
+          <div class="item-head"><strong>Kube-Sentinel｜Kubernetes 夜间值班自动处置哨兵</strong><span>Go / Kubernetes / Prometheus</span></div>
+          <ul>
+            <li>设计并实现面向 Kubernetes 值班场景的自动恢复控制器，通过 Alertmanager Webhook 接收告警，并生成自定义资源 <code>HealingRequest</code> 作为处置任务入口。</li>
+            <li>实现 Reconciler 编排流程，覆盖告警去重、状态流转、自动恢复、人工接管与结果记录等环节，形成从告警到处置的闭环。</li>
+            <li>在自动写操作前加入维护窗口、速率限制、熔断、爆炸半径控制与快照校验等安全门禁，降低自动化误操作风险。</li>
+            <li>输出 Kubernetes Event、结构化审计日志和 Prometheus 指标，便于通过 kubectl、Grafana 或日志系统追踪处置链路。</li>
+          </ul>
+        </article>
+        <article class="item">
+          <div class="item-head"><strong>Ocean｜海洋生态样本与设备巡检管理平台</strong><span>Laravel / React / Redis / Docker Compose</span></div>
+          <ul>
+            <li>构建前后端分离业务管理系统，覆盖巡检任务、样本登记、检测结果、异常处理、分析任务和首页统计看板等核心流程。</li>
+            <li>使用 Laravel 承载业务规则、REST API、数据库迁移和状态流转逻辑，前端基于 React + TypeScript + Vite 实现交互页面。</li>
+            <li>通过 Redis + Python Worker 解耦耗时分析任务，避免分析流程阻塞主业务接口。</li>
+            <li>使用 Docker Compose 编排 Nginx、Laravel、MariaDB、Redis 和 Worker 服务，降低本地部署、联调与演示成本。</li>
+          </ul>
+        </article>
+        <article class="item">
+          <div class="item-head"><strong>钢材表面缺陷智能检测分析系统</strong><span>FastAPI / Vue 3 / ECharts / 目标检测</span></div>
+          <ul>
+            <li>基于 FastAPI + Vue 3 实现前后端分离的工业缺陷检测平台，支持图像检测、视频检测和批量检测等使用场景。</li>
+            <li>实现检测历史、结果查询、Excel 导出、Word 报告生成、趋势分析、异常检测和批次分析等功能。</li>
+            <li>使用 ECharts 构建检测结果与统计分析看板，提升检测结果的可读性和演示效果。</li>
+            <li>设计统一文件访问接口，避免前端直接暴露服务端本地绝对路径，提升系统部署与访问安全性。</li>
+          </ul>
+        </article>
+        <article class="item">
+          <div class="item-head"><strong>MedKnow｜养生知识科普短视频平台后端参与</strong><span>Go / Gin / Gorm / MySQL / 微信小程序</span></div>
+          <ul>
+            <li>参与“梦溪比特”小团队项目开发，主要围绕养生知识科普短视频平台的小程序后端与业务功能实现。</li>
+            <li>使用 Go Gin + Gorm + MySQL 实现用户、专家、视频、评论、收藏、浏览历史等业务模块，并通过 JWT 完成基础认证。</li>
+            <li>配合前端完成接口联调与本地部署验证，参与 Docker 化运行环境整理和问题排查。</li>
+            <li>项目因微信官方资质审核限制未能正式上线，但完整参与了从需求拆解、接口开发到联调验证的工程流程。</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card section">
+        <h2>开源与工程实践</h2>
+        <article class="item compact">
+          <div class="item-head"><strong>CubeSandbox 开源贡献</strong><span>TencentCloud/CubeSandbox</span></div>
+          <ul>
+            <li>参与 CubeSandbox 开源项目贡献，提交并合并多个 PR，修改范围覆盖 CubeAPI、CubeMaster 与 cubemastercli 等模块。</li>
+            <li>为模板创建命令增加可重复传入的 DNS 参数，并将配置传递到模板容器流程；同时修复缺失 sandbox template 时的 API 错误映射。</li>
+            <li>优化模板镜像准备与观察流程，在本地已有源镜像时跳过不必要的拉取，并将 <code>tpl watch</code> 输出调整为阶段化状态展示。</li>
+          </ul>
+        </article>
+        <article class="item compact">
+          <div class="item-head"><strong>个人博客与开发环境维护</strong><span>Astro / Linux / dotfiles</span></div>
+          <ul>
+            <li>维护个人技术博客，记录 Linux、开发工具、项目实践与学习笔记。</li>
+            <li>长期维护个人 Linux 工作站与 dotfiles，涉及 zsh、Neovim、Git/GPG、代理、容器、开发工具链和多语言环境配置。</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <div class="card section">
+          <h2>奖项与证书</h2>
+          <ul>
+            <li>辽宁科技大学优秀学生三等奖学金</li>
+            <li>CET-4</li>
+            <li>其他竞赛与获奖证书：待整理补充</li>
+          </ul>
+        </div>
+        <div class="card section">
+          <h2>自我评价</h2>
+          <p>对 Linux、云原生、自动化运维和平台工程有持续兴趣，愿意从基础运维、工具开发和工程效率方向深入。</p>
+          <p>能够主动使用 AI Agents 提升项目交付效率，也清楚自身代码基础仍需加强，正在通过 Go、Shell、Kubernetes 与项目实践持续补足工程能力。</p>
+        </div>
+      </section>
     </main>
   </body>
-  </html>
+</html>

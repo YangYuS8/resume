@@ -1,114 +1,33 @@
-# SRE / DevOps / TechOps 中文简历
+# 杨栋森｜中文简历
 
-这是一份面向 `SRE / DevOps / TechOps` 实习岗位的中文技术简历工程，使用 LaTeX 编写，内容重点围绕 Linux、容器、虚拟化、服务部署、开源贡献和排错能力展开。
+这是一份面向 **运维 / DevOps / 云原生 / SRE / 平台工程实习** 的中文简历仓库。
 
-## 依赖安装
+当前维护方式很简单：
 
-推荐使用支持 XeLaTeX 的 TeX Live 环境，并安装 `latexmk`。
+- `resume.md`：主简历内容，日常只改这个文件。
+- `site/index.html`：可直接部署到 GitHub Pages 的静态在线简历。
+- `site/styles.css`：页面样式。
+- `reactive-resume.json` / `reactive-resume-import.json`：旧版 Reactive Resume 数据，仅作参考。
 
-在 Arch Linux 或其他基于 Arch 的发行版上，可参考：
-
-```bash
-sudo pacman -S texlive-basic texlive-latex texlive-latexrecommended texlive-langchinese texlive-fontsextra latexmk
-```
-
-如果你的发行版拆包方式不同，请确保至少具备：
-
-- `xelatex`
-- `latexmk`
-- `ctex`
-- `xeCJK`
-
-## 编译
-
-在仓库根目录运行：
+## 本地查看
 
 ```bash
-make
+python -m http.server 8000 -d site
 ```
 
-该命令会执行：
+然后访问：
 
-```bash
-latexmk -xelatex resume.tex
+```text
+http://127.0.0.1:8000
 ```
 
-成功后会生成 `resume.pdf`。
+## 投递前待补充
 
-## 在线简历 / GitHub Pages
+- 竞赛经历与获奖证书的正式名称、级别、时间。
+- 是否有 GPA、专业排名或核心课程成绩可写。
+- Kube-Sentinel / Ocean / CubeSandbox 等项目是否有可公开链接、PR 链接或部署截图。
+- 是否需要导出 PDF：可以后续用浏览器打印 `site/index.html` 为 PDF，或再接入更轻量的 Markdown 转 PDF 工具。
 
-在线简历地址：
+## 不再推荐的旧流程
 
-- `https://yangyus8.top/resume/`
-
-本地编译方式：
-
-```bash
-make
-```
-
-GitHub Actions 自动部署说明：
-
-- push 到 `main` 分支后会自动重新编译 `resume.tex` 并发布到 GitHub Pages。
-- 也支持在 Actions 页面手动触发 `workflow_dispatch`。
-
-如果首次使用 GitHub Pages，请在仓库设置中确认：
-
-- `Settings -> Pages -> Build and deployment -> Source` 选择 `GitHub Actions`
-
-## 清理
-
-清理中间文件：
-
-```bash
-make clean
-```
-
-清理中间文件和 PDF：
-
-```bash
-make distclean
-```
-
-## 需要手动替换的信息
-
-当前简历中仍保留了以下占位信息，建议在投递前手动替换：
-
-- 电话：`[待补充]`
-- 邮箱：`[your-email@example.com]`
-- 学校名称：`[学校名称待补充]`
-- 预计毕业时间：`[预计毕业时间待补充]`
-- 如有需要，也可补充更准确的学院、专业方向或教育经历细节
-
-## XeLaTeX 编译失败时的检查方法
-
-如果 `make` 失败，可以按下面顺序检查：
-
-1. 检查 `xelatex` 是否存在：
-
-```bash
-xelatex --version
-```
-
-2. 检查 `latexmk` 是否存在：
-
-```bash
-latexmk --version
-```
-
-3. 检查 `ctex` 和 `xeCJK` 是否随 TeX Live 正常安装。
-
-通常可以通过重新运行 XeLaTeX 并查看日志确认：
-
-```bash
-latexmk -xelatex resume.tex
-```
-
-若日志中提示缺少 `ctex`、`xeCJK`、字体或相关宏包，请安装对应的 TeX Live 组件后重试。
-
-4. 如仍失败，请查看同目录下的 `resume.log`，重点关注：
-
-- 缺少宏包
-- 字体不可用
-- 未定义命令
-- 页面溢出警告是否需要进一步压缩版式
+旧仓库使用 LaTeX + GitHub Actions 编译 PDF，对日常维护不友好。现在默认以 Markdown + 静态 HTML 维护，避免为了改几行简历去排查 TeX Live 依赖。

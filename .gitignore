@@ -1,22 +1,16 @@
-# LaTeX intermediate files
-*.aux
-*.bbl
-*.bcf
-*.blg
-*.fdb_latexmk
-*.fls
-*.log
-*.nav
-*.out
-*.run.xml
-*.snm
-*.synctex.gz
-*.toc
-*.xdv
+# Local exports
+*.pdf
+*.docx
+*.tmp
+*.bak
 
-# Local build output
-*.dvi
-*.ps
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
 
-# Keep the generated resume PDF tracked if desired
-# !resume.pdf
+# Keep resume sources tracked
+!resume.md
+!site/index.html
+!site/styles.css
