@@ -18,12 +18,10 @@ main:
             test -f site/index.html
             test -f site/styles.css
             test -f site/assets/avatar.png
-            python3 - <<'PY'
-            from html.parser import HTMLParser
-            from pathlib import Path
-            HTMLParser().feed(Path('site/index.html').read_text(encoding='utf-8'))
-            print('site html ok')
-            PY
+            grep -q '<!doctype html>' site/index.html
+            grep -q 'assets/avatar.png' site/index.html
+            grep -q '杨栋森' site/index.html
+            echo 'site static files ok'
 
         - name: deploy resume to EdgeOne Pages
           image: tencentcom/deploy-eopages:latest
