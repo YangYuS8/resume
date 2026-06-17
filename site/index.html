@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>杨栋森 - 运维 / DevOps / 云原生实习简历</title>
+    <title>杨栋森 - 运维 / DevOps 学习型实习简历</title>
     <meta
       name="description"
-      content="杨栋森的中文技术简历，面向运维、DevOps、云原生、SRE、平台工程实习岗位。"
+      content="杨栋森的中文技术简历，面向基础运维、DevOps、部署联调和平台工具实习岗位。"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -16,7 +16,7 @@
         <div class="hero-main">
           <p class="eyebrow">中文简历</p>
           <h1>杨栋森</h1>
-          <p class="subtitle">运维 / DevOps / 云原生 / SRE / 平台工程实习生</p>
+          <p class="subtitle">运维 / DevOps 学习型实习生</p>
           <div class="contact">
             <a href="tel:18683236881">18683236881</a>
             <a href="mailto:yangyus8@163.com">yangyus8@163.com</a>
@@ -32,9 +32,10 @@
       <section class="card section">
         <h2>个人简介</h2>
         <p>
-          辽宁科技大学网络工程专业 2027 届本科生，关注 Linux 运维、DevOps、云原生与平台工程方向。
-          熟悉 Linux 日常使用与故障排查，具备 Docker/Podman、Kubernetes、CI/CD、Nginx、Redis、MySQL/MariaDB、Prometheus 等工具的项目实践经验。
-          能够借助 AI Agents 提升工程交付效率，同时持续补足 Go、Shell、系统网络与云原生基础能力，适合从运维开发、平台工具、云原生基础设施等方向切入实习工作。
+          辽宁科技大学网络工程专业 2027 届本科生，关注 Linux 运维、DevOps 与云原生方向。
+          熟悉 Linux 日常使用、Git/GitHub 协作和常见项目启动流程，能够根据文档完成本地环境搭建、Docker Compose 服务编排、基础 Nginx 反向代理配置，并借助 1Panel 等工具完成简单部署。
+          日常会把 AI Agents 作为学习与工程辅助工具，用于需求拆解、方案对比、代码阅读、故障排查、文档生成和测试验证；同时会通过人工复核、运行测试和部署验证控制输出质量。
+          对 Kubernetes、CI/CD、Prometheus、后端框架和前端工程有项目接触和学习经历，但仍处于持续补基础阶段。希望从基础运维、部署联调、日志排查、文档整理和自动化辅助工作切入实习。
         </p>
       </section>
 
@@ -49,78 +50,87 @@
         </div>
         <div class="card section">
           <h2>求职方向</h2>
-          <p>运维 / DevOps / 云原生 / SRE / 平台工程实习</p>
-          <p class="muted">希望从基础设施、自动化运维、平台工具和云原生工程实践方向成长。</p>
+          <p>基础运维 / DevOps / 部署联调 / 平台工具实习</p>
+          <p class="muted">希望从 Linux、项目部署、日志排查、文档整理和自动化辅助方向成长。</p>
         </div>
       </section>
 
       <section class="card section">
         <h2>技术能力</h2>
         <ul class="skills">
-          <li><strong>操作系统与运维：</strong>Linux、systemd、SSH、日志排查、服务部署、反向代理、网络诊断</li>
-          <li><strong>云原生与容器：</strong>Kubernetes、CRD/Controller、Docker/Podman、Docker Compose、Helm、RBAC、Prometheus Metrics</li>
-          <li><strong>后端开发：</strong>Go、Gin、Gorm、RESTful API、JWT、PHP Laravel、Python FastAPI</li>
-          <li><strong>数据库与中间件：</strong>MySQL/MariaDB、SQLite、Redis</li>
-          <li><strong>前端与工程化：</strong>Vue 3、React、TypeScript、Vite、ECharts、pnpm、Git、GitHub Actions、Makefile</li>
-          <li><strong>AI 辅助工程：</strong>使用 Claude Code、Codex/OpenCode、Antigravity/Gemini 等 Agents 辅助需求拆解、代码审查、文档生成与自动化验证</li>
+          <li><strong>较熟悉：</strong>Linux 日常使用、Git/GitHub、根据文档搭建项目环境、Docker / Docker Compose 基础使用、AI Agents 辅助工程实践</li>
+          <li><strong>有部署实践：</strong>Nginx 基础反向代理配置、1Panel 面板部署、服务启动与基础日志查看、静态站点部署与 Pages 平台联调</li>
+          <li><strong>AI 辅助能力：</strong>使用 AI Agents 辅助需求拆解、命令生成、代码解释、日志分析、文档整理、测试用例补充和交付检查，并通过本地运行、测试输出和部署结果进行人工复核</li>
+          <li><strong>接触过：</strong>Kubernetes、Helm、Prometheus、GitHub Actions、Redis、MySQL/MariaDB、Go、Laravel、FastAPI、Vue、React</li>
+          <li><strong>正在补足：</strong>Shell 脚本、网络基础、Linux 服务排查、容器与云原生基础概念、后端代码阅读能力</li>
         </ul>
       </section>
 
       <section class="card section">
         <h2>项目经历</h2>
         <article class="item">
-          <div class="item-head"><strong>Kube-Sentinel｜Kubernetes 夜间值班自动处置哨兵</strong><span>Go / Kubernetes / Prometheus</span></div>
+          <div class="item-head"><strong>Ocean｜海洋生态样本与设备巡检管理平台</strong><span>部署联调 / Docker Compose / 文档整理</span></div>
           <ul>
-            <li>设计并实现面向 Kubernetes 值班场景的自动恢复控制器，通过 Alertmanager Webhook 接收告警，并生成自定义资源 <code>HealingRequest</code> 作为处置任务入口。</li>
-            <li>实现 Reconciler 编排流程，覆盖告警去重、状态流转、自动恢复、人工接管与结果记录等环节，形成从告警到处置的闭环。</li>
-            <li>在自动写操作前加入维护窗口、速率限制、熔断、爆炸半径控制与快照校验等安全门禁，降低自动化误操作风险。</li>
-            <li>输出 Kubernetes Event、结构化审计日志和 Prometheus 指标，便于通过 kubectl、Grafana 或日志系统追踪处置链路。</li>
+            <li>参与前后端分离业务系统的本地运行、部署联调和文档整理，项目覆盖巡检任务、样本登记、检测结果、异常处理、分析任务和统计看板等流程。</li>
+            <li>根据项目文档与配置文件梳理服务启动流程，使用 Docker Compose 编排 Nginx、Laravel、MariaDB、Redis 和 Worker 等组件。</li>
+            <li>接触 Redis + Python Worker 的异步任务处理方式，理解其用于避免耗时分析流程阻塞主业务接口的基本思路。</li>
+            <li>维护项目概览、部署说明和接口说明等材料，并使用 AI 辅助梳理部署检查清单与演示说明，辅助完成项目交付与演示准备。</li>
           </ul>
         </article>
         <article class="item">
-          <div class="item-head"><strong>Ocean｜海洋生态样本与设备巡检管理平台</strong><span>Laravel / React / Redis / Docker Compose</span></div>
+          <div class="item-head"><strong>钢材表面缺陷智能检测分析系统</strong><span>FastAPI / Vue 3 / ECharts / 项目材料</span></div>
           <ul>
-            <li>构建前后端分离业务管理系统，覆盖巡检任务、样本登记、检测结果、异常处理、分析任务和首页统计看板等核心流程。</li>
-            <li>使用 Laravel 承载业务规则、REST API、数据库迁移和状态流转逻辑，前端基于 React + TypeScript + Vite 实现交互页面。</li>
-            <li>通过 Redis + Python Worker 解耦耗时分析任务，避免分析流程阻塞主业务接口。</li>
-            <li>使用 Docker Compose 编排 Nginx、Laravel、MariaDB、Redis 和 Worker 服务，降低本地部署、联调与演示成本。</li>
+            <li>参与工业缺陷检测平台的运行、联调和材料整理，系统支持图像检测、视频检测和批量检测等使用场景。</li>
+            <li>根据已有代码和文档梳理前后端启动方式，配合完成检测历史、结果查询、Excel 导出、Word 报告和统计看板等功能验证。</li>
+            <li>接触 ECharts 可视化、文件上传与结果展示流程，理解前后端分离项目中接口联调和资源路径管理的基本问题。</li>
+            <li>整理软件说明、源代码说明与软著申请相关文档，使用 AI 辅助生成初稿、检查术语一致性和补全文档结构，积累项目材料归档经验。</li>
           </ul>
         </article>
         <article class="item">
-          <div class="item-head"><strong>钢材表面缺陷智能检测分析系统</strong><span>FastAPI / Vue 3 / ECharts / 目标检测</span></div>
+          <div class="item-head"><strong>MedKnow｜养生知识科普短视频平台后端参与</strong><span>Go / Gin / MySQL / 微信小程序</span></div>
           <ul>
-            <li>基于 FastAPI + Vue 3 实现前后端分离的工业缺陷检测平台，支持图像检测、视频检测和批量检测等使用场景。</li>
-            <li>实现检测历史、结果查询、Excel 导出、Word 报告生成、趋势分析、异常检测和批次分析等功能。</li>
-            <li>使用 ECharts 构建检测结果与统计分析看板，提升检测结果的可读性和演示效果。</li>
-            <li>设计统一文件访问接口，避免前端直接暴露服务端本地绝对路径，提升系统部署与访问安全性。</li>
-          </ul>
-        </article>
-        <article class="item">
-          <div class="item-head"><strong>MedKnow｜养生知识科普短视频平台后端参与</strong><span>Go / Gin / Gorm / MySQL / 微信小程序</span></div>
-          <ul>
-            <li>参与“梦溪比特”小团队项目开发，主要围绕养生知识科普短视频平台的小程序后端与业务功能实现。</li>
-            <li>使用 Go Gin + Gorm + MySQL 实现用户、专家、视频、评论、收藏、浏览历史等业务模块，并通过 JWT 完成基础认证。</li>
+            <li>参与“梦溪比特”小团队项目，围绕养生知识科普短视频平台的小程序后端、接口联调和本地运行环境进行配合。</li>
+            <li>接触 Go Gin + Gorm + MySQL 的后端项目结构，了解用户、专家、视频、评论、收藏、浏览历史等业务模块的基本划分。</li>
             <li>配合前端完成接口联调与本地部署验证，参与 Docker 化运行环境整理和问题排查。</li>
-            <li>项目因微信官方资质审核限制未能正式上线，但完整参与了从需求拆解、接口开发到联调验证的工程流程。</li>
+            <li>项目因微信官方资质审核限制未能正式上线，但完整经历了需求拆解、接口联调、部署验证和材料整理流程。</li>
+          </ul>
+        </article>
+        <article class="item">
+          <div class="item-head"><strong>Kube-Sentinel｜Kubernetes 自动处置学习项目（开发中）</strong><span>AI Agents / Kubernetes / 学习项目</span></div>
+          <ul>
+            <li>使用 AI Agents 辅助搭建的云原生学习项目，目标是探索 Kubernetes 告警接入、处置任务记录和自动化恢复流程，目前仍在开发和理解代码阶段。</li>
+            <li>项目设计中包含 Alertmanager Webhook、<code>HealingRequest</code> 自定义资源、Reconciler、Kubernetes Event、审计日志和 Prometheus 指标等模块。</li>
+            <li>通过该项目接触 CRD、RBAC、Helm、Controller 等概念，当前重点是补足 Kubernetes 基础、阅读生成代码并理解各模块职责。</li>
+            <li>本项目更适合作为学习经历和方向展示，不作为独立成熟项目或生产实践表述。</li>
           </ul>
         </article>
       </section>
 
       <section class="card section">
+        <h2>AI 辅助工程实践</h2>
+        <ul>
+          <li>在个人项目、开源贡献和简历/博客维护中持续使用 AI Agents 作为工程辅助工具，主要用于需求拆解、技术方案对比、代码阅读、命令生成、文档初稿和测试建议。</li>
+          <li>在 DevOps/云原生学习项目中，通过 AI Agents 辅助理解 Kubernetes Controller、CRD、Webhook、Helm、RBAC 等模块，并结合官方文档、测试结果和实际运行日志进行人工复核。</li>
+          <li>在项目交付过程中，使用 AI 辅助整理 README、部署步骤、故障记录和检查清单，降低重复文档工作成本，提高环境复现和交接效率。</li>
+          <li>对 AI 输出保持审慎态度：不直接照搬未验证结论，重点通过本地运行、单元测试、构建结果、页面访问和日志输出来确认修改是否有效。</li>
+        </ul>
+      </section>
+
+      <section class="card section">
         <h2>开源与工程实践</h2>
         <article class="item compact">
-          <div class="item-head"><strong>CubeSandbox 开源贡献</strong><span>TencentCloud/CubeSandbox</span></div>
+          <div class="item-head"><strong>CubeSandbox 开源贡献</strong><span>GitHub PR / 代码审查 / 命令行验证</span></div>
           <ul>
-            <li>参与 CubeSandbox 开源项目贡献，提交并合并多个 PR，修改范围覆盖 CubeAPI、CubeMaster 与 cubemastercli 等模块。</li>
-            <li>为模板创建命令增加可重复传入的 DNS 参数，并将配置传递到模板容器流程；同时修复缺失 sandbox template 时的 API 错误映射。</li>
-            <li>优化模板镜像准备与观察流程，在本地已有源镜像时跳过不必要的拉取，并将 <code>tpl watch</code> 输出调整为阶段化状态展示。</li>
+            <li>参与 TencentCloud/CubeSandbox 开源项目贡献，借助项目文档和 AI Agents 辅助完成若干 PR 的修改与验证。</li>
+            <li>修改范围涉及 CubeAPI、CubeMaster 与 cubemastercli 等模块，包括参数传递、错误映射和命令输出优化等较小范围改动。</li>
+            <li>通过开源贡献熟悉 GitHub PR 流程、代码审查反馈、命令行工具验证和项目协作规范。</li>
           </ul>
         </article>
         <article class="item compact">
           <div class="item-head"><strong>个人博客与开发环境维护</strong><span>Astro / Linux / dotfiles</span></div>
           <ul>
             <li>维护个人技术博客，记录 Linux、开发工具、项目实践与学习笔记。</li>
-            <li>长期维护个人 Linux 工作站与 dotfiles，涉及 zsh、Neovim、Git/GPG、代理、容器、开发工具链和多语言环境配置。</li>
+            <li>长期维护个人 Linux 工作站与 dotfiles，涉及 zsh、Neovim、Git/GPG、代理、容器和多语言开发环境配置。</li>
           </ul>
         </article>
       </section>
@@ -136,8 +146,9 @@
         </div>
         <div class="card section">
           <h2>自我评价</h2>
-          <p>对 Linux、云原生、自动化运维和平台工程有持续兴趣，愿意从基础运维、工具开发和工程效率方向深入。</p>
-          <p>能够主动使用 AI Agents 提升项目交付效率，也清楚自身代码基础仍需加强，正在通过 Go、Shell、Kubernetes 与项目实践持续补足工程能力。</p>
+          <p>对 Linux、部署联调、自动化运维和云原生方向有持续兴趣，愿意从基础运维、项目部署、日志排查和文档整理等工作做起。</p>
+          <p>能够主动使用 AI Agents 提高学习和项目整理效率，已形成“AI 辅助生成思路 + 人工复核 + 实际运行验证”的基本工作习惯。</p>
+          <p>清楚自身代码基础与云原生理解仍需加强，正在通过项目复盘、官方文档阅读和基础学习逐步补足。</p>
         </div>
       </section>
     </main>
