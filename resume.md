@@ -74,6 +74,12 @@
 
 ## 开源与工程实践
 
+### lwe｜Linux Wallpaper Engine 桌面工具
+
+- 个人开发的 Linux 桌面开源软件，用于浏览、管理和应用 Wallpaper Engine 内容，面向 Linux 桌面迁移与动态壁纸使用场景。
+- 项目使用 Rust、Tauri、Svelte/TypeScript 等技术栈，提供 AUR 包、GitHub Releases 与在线文档。
+- 通过该项目接触 Linux 桌面应用打包、发布流程、文档维护和开源项目反馈处理。
+
 ### CubeSandbox 开源贡献
 
 - 参与 TencentCloud/CubeSandbox 开源项目贡献，借助项目文档和 AI Agents 辅助完成若干 PR 的修改与验证。
