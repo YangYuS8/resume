@@ -1,0 +1,142 @@
+[
+  {
+    "title": "2024年辽宁省大学生智能技术应用大赛",
+    "award": "一等奖",
+    "project": "智能化在线程序测评系统",
+    "org": "辽宁省教育厅",
+    "date": "2024.09",
+    "file": "2024-liaoning-intelligent-tech-ojs-first.webp",
+    "level": "省级",
+    "highlight": true
+  },
+  {
+    "title": "2024年第六届全球校园人工智能算法精英大赛东北赛区省级选拔赛",
+    "award": "一等奖",
+    "project": "超声乳腺影像的 BIRADS 分类及特征识别",
+    "org": "江苏省人工智能学会、赛事组委会",
+    "date": "2024.11",
+    "file": "2024-global-campus-ai-algorithm-ne-first.webp",
+    "level": "赛区/省级",
+    "highlight": true
+  },
+  {
+    "title": "2024年第六届全球校园人工智能算法精英大赛全国总决赛",
+    "award": "三等奖",
+    "project": "超声乳腺影像的 BIRADS 分类及特征识别",
+    "org": "江苏省人工智能学会、赛事组委会",
+    "date": "2024.11",
+    "file": "2024-global-campus-ai-algorithm-national-third.webp",
+    "level": "全国",
+    "highlight": true
+  },
+  {
+    "title": "2024年第三届辽宁省“中软国际--卓越杯”大数据挑战赛",
+    "award": "二等奖",
+    "project": "智能化在线程序测评系统",
+    "org": "辽宁省教育厅",
+    "date": "2024.11",
+    "file": "2024-liaoning-big-data-challenge-second.webp",
+    "level": "省级",
+    "highlight": true
+  },
+  {
+    "title": "2025年辽宁省 iCAN 创新创业大赛暨第十九届 iCAN 大学生创新创业大赛辽宁赛区选拔赛",
+    "award": "二等奖",
+    "project": "超音智检--智能移动的组台检测系统",
+    "org": "辽宁省教育厅、iCAN 大学生创新创业大赛组委会",
+    "date": "2025.09",
+    "file": "2025-liaoning-ican-entrepreneurship-second.webp",
+    "level": "省级",
+    "highlight": true
+  },
+  {
+    "title": "2024年第四届辽宁省大学生 iTeach 数字化教育应用创新大赛",
+    "award": "省级二等奖",
+    "project": "工具系统类",
+    "org": "辽宁省教育厅",
+    "date": "2024.05",
+    "file": "2024-iteach-digital-education-second.webp",
+    "level": "省级",
+    "highlight": true
+  },
+  {
+    "title": "2024年第三届辽宁省虚拟现实与新媒体创新设计大赛",
+    "award": "二等奖",
+    "project": "基于 Unity3D 的虚拟网络实验教学平台",
+    "org": "辽宁省教育厅",
+    "date": "2024.12",
+    "file": "2024-liaoning-vr-new-media-second.webp",
+    "level": "省级",
+    "highlight": false
+  },
+  {
+    "title": "2023年辽宁省大学生数学建模竞赛",
+    "award": "三等奖",
+    "project": "数学建模竞赛",
+    "org": "辽宁省教育厅",
+    "date": "2023.08",
+    "file": "2023-liaoning-math-modeling-third.webp",
+    "level": "省级",
+    "highlight": false
+  },
+  {
+    "title": "2023年第三届中国高校大数据挑战赛",
+    "award": "本科生组三等奖",
+    "project": "大数据挑战赛",
+    "org": "中国计算机学会、中国大数据与智能计算产业联盟",
+    "date": "2024.03",
+    "file": "2023-china-university-big-data-challenge-third.webp",
+    "level": "竞赛",
+    "highlight": false
+  },
+  {
+    "title": "2024年第五届辽宁省“中软国际--卓越杯”AI 挑战赛",
+    "award": "省级三等奖",
+    "project": "AI 挑战赛",
+    "org": "辽宁省教育厅",
+    "date": "2024.10",
+    "file": "2024-csii-excellence-ai-challenge-third.webp",
+    "level": "省级",
+    "highlight": false
+  },
+  {
+    "title": "2024年辽宁省大学生智能技术应用大赛",
+    "award": "三等奖",
+    "project": "基于 PVS 剪枝算法的苏拉卡尔塔棋对战平台",
+    "org": "辽宁省教育厅",
+    "date": "2024.09",
+    "file": "2024-liaoning-intelligent-tech-surakarta-third.webp",
+    "level": "省级",
+    "highlight": false
+  },
+  {
+    "title": "第二十七届中国机器人及人工智能大赛“海光杯”辽宁赛区选拔赛",
+    "award": "三等奖",
+    "project": "创新赛·人工智能创新赛",
+    "org": "中国机器人及人工智能大赛组委会",
+    "date": "2025.07",
+    "file": "2025-craic-liaoning-ai-innovation-third.webp",
+    "level": "赛区",
+    "highlight": false
+  },
+  {
+    "title": "2025年第五届辽宁省大学生 iTeach 数字化教育应用创新大赛",
+    "award": "省级三等奖",
+    "project": "codyssey 智能化在线评测系统",
+    "org": "辽宁省教育厅",
+    "date": "2025.10",
+    "file": "2025-iteach-codyssey-third.webp",
+    "level": "省级",
+    "highlight": false
+  },
+  {
+    "title": "辽宁科技大学优秀学生奖学金",
+    "award": "优秀学生三等奖学金",
+    "project": "学业奖学金",
+    "org": "辽宁科技大学",
+    "date": "2025.08",
+    "file": "2025-liaoning-university-scholarship-third.webp",
+    "level": "校级",
+    "highlight": false
+  }
+]
