@@ -27,7 +27,7 @@
         width: 210mm;
         min-height: 297mm;
         margin: 0 auto;
-        padding: 11mm 12mm 10mm;
+        padding: 10mm 11mm 9mm;
         background: #ffffff;
         page-break-after: always;
       }
@@ -38,8 +38,8 @@
 
       .hero {
         display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 8mm;
+        grid-template-columns: 24mm 1fr;
+        gap: 7mm;
         align-items: start;
         padding-bottom: 4mm;
         border-bottom: 2px solid #1d4ed8;
@@ -60,28 +60,46 @@
       }
 
       .contact {
-        display: grid;
-        gap: 1.2mm;
-        justify-items: end;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4mm 4.2mm;
+        align-items: center;
         color: #344256;
         font-size: 8.7pt;
-        white-space: nowrap;
+      }
+
+      .portrait {
+        justify-self: start;
+        width: 23mm;
+        height: 31mm;
+        margin: 0;
+        overflow: hidden;
+        border: 1px solid #cbd5e1;
+        border-radius: 1.6mm;
+        background: #ffffff;
+      }
+
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
       .summary {
-        margin: 3.5mm 0 0;
+        margin: 3mm 0 0;
         color: #243044;
       }
 
       .section {
-        margin-top: 3.7mm;
+        margin-top: 3.5mm;
       }
 
       .section-title {
         display: flex;
         align-items: center;
         gap: 2mm;
-        margin: 0 0 1.7mm;
+        margin: 0 0 1.55mm;
         color: #0f172a;
         font-size: 12pt;
         line-height: 1.2;
@@ -177,8 +195,8 @@
 
       .page-label {
         position: absolute;
-        right: 12mm;
-        bottom: 7mm;
+        right: 11mm;
+        bottom: 6.5mm;
         color: #94a3b8;
         font-size: 8pt;
       }
@@ -206,18 +224,21 @@
   <body>
     <section class="page">
       <header class="hero">
+        <figure class="portrait" aria-label="证件照">
+          <img src="assets/avatar-pdf.webp" alt="杨栋森证件照" />
+        </figure>
         <div>
           <h1>杨栋森</h1>
           <div class="role">运维 / DevOps / 部署联调 / 平台工具实习</div>
+          <div class="contact">
+            <span>手机：18683236881</span>
+            <span>邮箱：yangyus8@163.com</span>
+            <span>GitHub：github.com/YangYuS8</span>
+            <span>博客：blog.yangyus8.top</span>
+          </div>
           <p class="summary">
             辽宁科技大学网络工程专业 2027 届本科生，关注 Linux 运维、DevOps 与云原生方向。熟悉 Linux 日常使用、Git/GitHub 协作和常见项目启动流程，能够根据文档完成本地环境搭建、Docker Compose 服务编排、基础 Nginx 反向代理配置，并借助 1Panel 等工具完成简单部署。日常使用 AI Agents 辅助需求拆解、代码阅读、日志分析、文档整理和测试验证，并通过本地运行与部署结果进行人工复核。
           </p>
-        </div>
-        <div class="contact">
-          <span>手机：18683236881</span>
-          <span>邮箱：yangyus8@163.com</span>
-          <span>GitHub：github.com/YangYuS8</span>
-          <span>博客：blog.yangyus8.top</span>
         </div>
       </header>
 
@@ -255,7 +276,7 @@
           <ul>
             <li>参与前后端分离业务系统的本地运行、部署联调和文档整理，覆盖巡检任务、样本登记、检测结果、异常处理、分析任务和统计看板等流程。</li>
             <li>根据项目文档与配置文件梳理服务启动流程，使用 Docker Compose 编排 Nginx、Laravel、MariaDB、Redis 和 Worker 等组件，降低本地演示和联调成本。</li>
-            <li>接触 Redis + Python Worker 的异步任务处理方式，理解其用于避免耗时分析流程阻塞主业务接口的基本思路。</li>
+            <li>接触 Redis + Python Worker 的异步任务处理方式，理解服务依赖、异步任务、端口配置和部署文档之间的关系。</li>
           </ul>
         </article>
 
@@ -265,16 +286,11 @@
           <ul>
             <li>参与工业缺陷检测平台的运行、联调和材料整理，系统支持图像检测、视频检测和批量检测等场景。</li>
             <li>根据已有代码和文档梳理前后端启动方式，配合完成检测历史、结果查询、Excel 导出、Word 报告和统计看板等功能验证。</li>
-            <li>整理软件说明、源代码说明与软著申请相关文档，使用 AI 辅助生成初稿、检查术语一致性和补全文档结构。</li>
+            <li>整理软件说明、源代码说明与软著申请相关文档，逐步形成“先复现环境、再观察日志、最后沉淀文档”的工程习惯。</li>
           </ul>
         </article>
-      </section>
-      <div class="page-label">1 / 2</div>
-    </section>
 
-    <section class="page">
-      <section class="section">
-        <h2 class="section-title">项目经历（续）</h2>
+
         <article class="item">
           <div class="item-head"><strong>MedKnow｜养生知识科普短视频平台后端参与</strong><span>Go / Gin / MySQL / Docker</span></div>
           <div class="meta">Go / Gin / Gorm / MySQL / JWT / Docker / Vue 3 / UniApp</div>
@@ -283,15 +299,21 @@
             <li>接触 Go Gin + Gorm + MySQL 的后端项目结构，了解用户、专家、视频、评论、收藏、浏览历史等业务模块划分。</li>
             <li>配合前端完成接口联调与本地部署验证，参与 Docker 化运行环境整理和问题排查。</li>
           </ul>
-        </article>
+        </article>      </section>
 
+      <div class="page-label">1 / 2</div>
+    </section>
+
+    <section class="page">
+      <section class="section">
+        <h2 class="section-title">项目经历（续）</h2>
         <article class="item">
           <div class="item-head"><strong>Kube-Sentinel｜Kubernetes 自动处置学习项目（开发中）</strong><span>云原生学习 / Controller / CRD</span></div>
           <div class="meta">Go / Kubernetes Controller / CRD / Alertmanager Webhook / Prometheus / Helm / RBAC</div>
           <ul>
             <li>使用 AI Agents 辅助搭建云原生学习项目，探索 Kubernetes 告警接入、处置任务记录和自动化恢复流程。</li>
             <li>项目设计包含 Alertmanager Webhook、HealingRequest 自定义资源、Reconciler、Kubernetes Event、审计日志和 Prometheus 指标等模块。</li>
-            <li>通过该项目接触 CRD、RBAC、Helm、Controller 等概念，当前重点是补足 Kubernetes 基础并理解各模块职责。</li>
+            <li>通过该项目接触 CRD、RBAC、Helm、Controller 等概念，持续补足 Linux 服务排查、容器编排、CI/CD 与 Kubernetes 基础概念。</li>
           </ul>
         </article>
       </section>
@@ -308,6 +330,7 @@
         <div>
           <h2 class="section-title">开源与工程实践</h2>
           <ul class="compact-list">
+            <li><strong>lwe 开源软件：</strong>个人开发的 Linux 桌面应用，用于浏览、管理和应用 Wallpaper Engine 内容；项目使用 Rust、Tauri、Svelte/TypeScript，提供 AUR 包、GitHub Releases 与在线文档。</li>
             <li><strong>CubeSandbox 开源贡献：</strong>参与 TencentCloud/CubeSandbox 项目贡献，修改涉及 CubeAPI、CubeMaster 与 cubemastercli 等模块，熟悉 PR、代码审查反馈和命令行验证。</li>
             <li><strong>个人博客与开发环境：</strong>维护 blog.yangyus8.top 与个人 Linux 工作站 / dotfiles，涉及 zsh、Neovim、Git/GPG、代理、容器和多语言开发环境配置。</li>
           </ul>
