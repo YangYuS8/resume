@@ -18,7 +18,7 @@ main:
             test -f site/index.html
             test -f site/styles.css
             test -f site/resume.pdf
-            test -f site/resume-pdf.html
+            test -f site/resume-print.html
             test -f site/assets/avatar.png
             grep -q '<!doctype html>' site/index.html
             grep -q 'assets/avatar.png' site/index.html

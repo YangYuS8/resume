@@ -5,11 +5,11 @@
 当前维护方式很简单：
 
 - `resume.md`：主简历内容，日常只改这个文件。
-- `resume-pdf.mdx`：PDF 投递版源文件，控制 A4 版面与 1-2 页内容取舍。
-- `scripts/build-pdf.js`：无依赖 PDF 构建脚本，使用本机 Chrome 生成 `site/resume.pdf`。
+- `site/resume-print.html`：PDF 投递版源文件，使用纯 HTML/CSS 显式控制 A4 双页版式。
+- `scripts/build-pdf.js`：无依赖 PDF 构建脚本，使用本机 Chrome 从 `site/resume-print.html` 生成 `site/resume.pdf`。
 - `site/index.html`：可直接部署到 GitHub Pages 的静态在线简历。
 - `site/styles.css`：页面样式。
-- `site/resume.pdf` / `site/resume-pdf.html`：网页提供下载与预览的 PDF 投递版产物。
+- `site/resume.pdf`：网页提供下载的 PDF 投递版产物。
 - `reactive-resume.json` / `reactive-resume-import.json`：旧版 Reactive Resume 数据，仅作参考。
 
 ## 本地查看
@@ -31,7 +31,7 @@ node scripts/build-pdf.js
 pdfinfo site/resume.pdf
 ```
 
-PDF 版由 `resume-pdf.mdx` 生成，目标是 A4、1-2 页，适合投递；网页首页提供下载入口。
+PDF 版由 `site/resume-print.html` 生成，采用显式 A4 双页版式，避免“一页多一点点”的尴尬分页；网页首页提供下载入口。
 
 ## 部署与同步
 
