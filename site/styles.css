@@ -92,6 +92,39 @@ code {
   font-size: 14px;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-top: 18px;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.22);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.download-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.secondary-link {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .portrait {
   margin: 0;
   justify-self: end;
@@ -301,6 +334,11 @@ li {
     justify-content: flex-start;
   }
 
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .portrait {
     justify-self: start;
   }
@@ -361,6 +399,10 @@ li {
 
   a {
     color: var(--text);
+  }
+
+  .hero-actions {
+    display: none;
   }
 
   .certificates-section {

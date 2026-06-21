@@ -5,8 +5,11 @@
 当前维护方式很简单：
 
 - `resume.md`：主简历内容，日常只改这个文件。
+- `resume-pdf.mdx`：PDF 投递版源文件，控制 A4 版面与 1-2 页内容取舍。
+- `scripts/build-pdf.js`：无依赖 PDF 构建脚本，使用本机 Chrome 生成 `site/resume.pdf`。
 - `site/index.html`：可直接部署到 GitHub Pages 的静态在线简历。
 - `site/styles.css`：页面样式。
+- `site/resume.pdf` / `site/resume-pdf.html`：网页提供下载与预览的 PDF 投递版产物。
 - `reactive-resume.json` / `reactive-resume-import.json`：旧版 Reactive Resume 数据，仅作参考。
 
 ## 本地查看
@@ -20,6 +23,15 @@ python -m http.server 8000 -d site
 ```text
 http://127.0.0.1:8000
 ```
+
+## 生成 PDF
+
+```bash
+node scripts/build-pdf.js
+pdfinfo site/resume.pdf
+```
+
+PDF 版由 `resume-pdf.mdx` 生成，目标是 A4、1-2 页，适合投递；网页首页提供下载入口。
 
 ## 部署与同步
 
@@ -41,7 +53,7 @@ HOME=/home/yangyus8 cnb build get-build-logs --repo Nesoriel/YangYuS8/resume --p
 - 竞赛经历与获奖证书的正式名称、级别、时间。
 - 是否有 GPA、专业排名或核心课程成绩可写。
 - Kube-Sentinel / Ocean / CubeSandbox 等项目是否有可公开链接、PR 链接或部署截图。
-- 是否需要导出 PDF：可以后续用浏览器打印 `site/index.html` 为 PDF，或再接入更轻量的 Markdown 转 PDF 工具。
+- PDF 版投递内容需要随项目和奖项变化定期同步，保持 1-2 页以内。
 
 ## 不再推荐的旧流程
 
