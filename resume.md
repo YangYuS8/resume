@@ -86,6 +86,12 @@
 - 修改范围涉及 CubeAPI、CubeMaster 与 cubemastercli 等模块，包括参数传递、错误映射和命令输出优化等较小范围改动。
 - 通过开源贡献熟悉 GitHub PR 流程、代码审查反馈、命令行工具验证和项目协作规范。
 
+### 自托管与 AI Agent 工具链实践
+
+- 维护个人 PVE / Linux 自托管环境和本地开发工作站，实践服务启动、日志查看、基础反向代理、面板部署、静态站点发布和故障记录整理。
+- 长期使用并维护 Hermes、OpenClaw、OpenCode 等 AI Agent 工具链，处理过 systemd 服务、Telegram Gateway、环境变量、运行路径和版本残留等排障场景。
+- 通过自定义 skills、项目规则和博客复盘沉淀可复用工作流，将部署步骤、排障记录和 agent 协作约定转化为后续项目可复用的检查清单。
+
 ### 个人博客与开发环境维护
 
 - 维护个人技术博客 `blog.yangyus8.top`，使用 Astro + Fuwari + pnpm 构建，记录 Linux、开发工具、项目实践与学习笔记。
