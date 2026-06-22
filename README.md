@@ -5,7 +5,7 @@
 当前维护方式很简单：
 
 - `resume.md`：主简历内容，日常只改这个文件。
-- `site/resume-print.html`：PDF 投递版源文件，使用纯 HTML/CSS 显式控制 A4 双页版式。
+- `site/resume-print.html`：PDF 投递版源文件，使用纯 HTML/CSS 显式控制 A4 一页精简版式。
 - `scripts/build-pdf.js`：无依赖 PDF 构建脚本，使用本机 Chrome 从 `site/resume-print.html` 生成 `site/resume.pdf`。
 - `site/index.html`：可直接部署到 GitHub Pages 的静态在线简历。
 - `site/styles.css`：页面样式。
@@ -31,7 +31,7 @@ node scripts/build-pdf.js
 pdfinfo site/resume.pdf
 ```
 
-PDF 版由 `site/resume-print.html` 生成，采用显式 A4 双页版式，避免“一页多一点点”的尴尬分页；网页首页提供下载入口。
+PDF 版由 `site/resume-print.html` 生成，采用显式 A4 一页精简投递版式；网页首页继续承担详细项目、证书墙和补充材料展示。
 
 ## 部署与同步
 
