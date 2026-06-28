@@ -1,14 +1,14 @@
-# 杨栋森｜运维开发 / DevOps / 部署联调实习生
+# 杨栋森｜DevOps / SRE / 运维开发实习生
 
 - 手机：18683236881
 - 邮箱：yangyus8@163.com
 - GitHub：https://github.com/YangYuS8
 - 博客：https://blog.yangyus8.top
-- 求职方向：运维开发实习 / DevOps 实习 / 部署联调实习 / 平台工具实习
+- 求职方向：DevOps 实习 / SRE 实习 / 运维开发实习 / 云原生运维实习 / 部署联调实习
 
 ## 个人简介
 
-辽宁科技大学网络工程专业 2027 届本科生，投递运维开发 / DevOps / 平台工具方向。平时主要在 Linux 环境下学习和开发，熟悉 Git/GitHub 协作、项目本地启动、Docker Compose 多组件编排、Nginx 反向代理、MySQL / Redis 等基础组件联调、服务状态检查、日志定位和接口连通性验证。项目经历以 Ocean 多组件系统部署联调、Astralith 轻量级自动化运维平台、MedKnow Go 后端接口联调和个人 PVE / Linux 自托管维护实践为主。相比“只写业务功能”，我更关注系统能否稳定启动、问题能否定位、部署步骤能否复现、日志和文档能否支撑后续交接。
+辽宁科技大学网络工程专业 2027 届本科生，求职方向为 DevOps / SRE / 运维开发。长期维护个人 PVE Homelab 与多台 Linux 服务器，具备 Docker Compose 服务部署、Nginx 反向代理、远程组网、基础监控、日志排查与文档沉淀经验；熟悉 Linux 常用操作、容器化部署、服务状态检查、接口连通性验证和多组件项目本地联调。能够使用 AI Agent 辅助日志分析、脚本编写、代码阅读和文档初稿整理，并通过本地运行、接口验证和部署结果进行人工复核。相比“只写业务功能”，更关注系统能否稳定启动、问题能否定位、部署步骤能否复现、交接材料是否可用。
 
 ## 教育经历
 
@@ -21,23 +21,45 @@
 
 ## 技术能力
 
-- **Linux / 运维基础**：熟悉 Linux 日常使用，能使用 `systemctl`、`journalctl`、`ss`、`curl`、`df`、`free` 等命令进行服务状态、日志、端口、接口连通性和资源占用检查；接触 PVE / 自托管服务器维护、1Panel 面板部署和静态站点发布。
-- **容器与部署联调**：熟悉 Docker / Docker Compose 基础使用，能根据项目说明整理多组件本地运行环境；接触 Nginx 反向代理、MariaDB / MySQL、Redis、Python Worker、环境变量、端口映射、服务依赖和部署文档整理。
-- **开发与接口协作**：了解 Python / FastAPI、Go / Gin / Gorm、Laravel、Vue、React、TypeScript 等项目结构，能阅读已有代码、理解接口职责，配合定位配置、参数、数据库连接和接口返回问题。
-- **自动化运维学习**：正在通过 Astralith 项目学习 FastAPI + Ansible Runner 的轻量自动化运维流程，接触任务创建、定时触发、执行日志保存、主机管理和受控操作模块等设计。
-- **工程协作与 AI 工具**：熟悉 Git/GitHub、README、部署说明、接口说明和检查清单整理；使用 AI 工具辅助代码阅读、日志分析和文档初稿，但会通过本地运行、接口验证和部署结果进行人工复核。
+- **Linux / 运维基础**：熟悉 Linux 日常使用，能使用 `systemctl`、`journalctl`、`ss`、`curl`、`df`、`free` 等命令进行服务状态、日志、端口、接口连通性和资源占用检查；具备 PVE / 自托管服务器维护、1Panel 面板部署、静态站点发布和故障记录整理经验。
+- **容器与部署**：熟悉 Docker / Docker Compose / Podman 基础使用，能编写和整理 Compose 编排文件、环境变量、端口映射、数据目录、服务依赖和部署文档；接触 Nginx 反向代理、MariaDB / MySQL、Redis、Python Worker 等常见组件联调。
+- **网络与远程访问**：了解 TCP/IP、HTTP、DNS、反向代理和常见端口排查思路；实践过 Tailscale、WireGuard / OpenWrt 旁路网关、Nginx / OpenResty 反代和内网服务访问配置。
+- **云原生 / 监控学习**：了解 Kubernetes / k3s、Helm、Prometheus、Grafana 等基础概念，实践过 Deployment、Service、Pod、镜像更新、版本回滚、Helm 组件部署和常见镜像拉取问题排查。
+- **开发与自动化基础**：了解 Python / FastAPI、Go / Gin / Gorm、Shell、Laravel、Vue、React、TypeScript 等项目结构，能阅读已有代码、理解接口职责，配合定位配置、参数、数据库连接和接口返回问题。
+- **工程协作与 AI 工具**：熟悉 Git/GitHub、README、部署说明、接口说明、检查清单和博客复盘整理；使用 AI 工具辅助代码阅读、日志分析、命令生成和文档初稿，但会进行人工验证。
 
 ## 项目经历
+
+### 个人 Homelab 运维与服务迁移实践
+
+**角色**：项目负责人 / 运维实践<br>
+**接触技术**：PVE、Debian、Docker Compose、Dockge、Nginx / OpenResty、Tailscale、WireGuard / OpenWrt、1Panel、Git
+
+- 基于 PVE 搭建个人 Homelab 环境，长期维护 Linux 虚拟机、Docker 服务机、代理网关和多类自托管服务，作为 DevOps、SRE 与云原生技术的实践平台。
+- 将 PVE 宿主机直接承载 Docker、面板、媒体、代理和反代服务的混合架构，逐步整理为 `PVE 宿主机 / infra-docker-01 / net-gateway-01 / 业务 VM` 的分层结构，降低排障边界混乱和宿主机暴露风险。
+- 使用 Docker Compose / Dockge 管理多个自托管服务，规范 Stack、`.env`、配置目录、数据目录和 Git 版本化流程，形成可迁移、可回滚、可复查的服务管理方式。
+- 配置 Tailscale、WireGuard / OpenWrt 旁路网关和 Nginx / OpenResty 反向代理，处理远程访问、Docker Hub 拉取、代理链路、IP 冲突、端口暴露和服务迁移等问题。
+- 将部署、迁移和排障过程整理为博客文章与检查清单，沉淀可复用的服务器维护、Compose 管理和故障定位经验。
+
+### Kube-Sentinel｜Kubernetes 夜间值班哨兵工具
+
+**角色**：开发者 / 云原生运维实践<br>
+**接触技术**：Go、Kubernetes、Controller Runtime、CRD、Helm、Alertmanager、Prometheus、Grafana、Telegram Bot
+
+- 面向 Kubernetes 夜间值班场景实现轻量哨兵工具，接收 Alertmanager Webhook 告警并映射为 `HealingRequest`，形成从告警、分诊、最小处置到审计记录的闭环。
+- 围绕 Deployment L1 自动处置设计安全边界，在自动写操作前加入维护窗口、速率限制、爆炸半径、熔断和写前快照校验，避免把 Agent 或自动化脚本直接放到高风险执行路径。
+- 输出 Kubernetes Event、结构化审计、Prometheus 指标和 Telegram incident card，为值班人员提供可解释、可人工接管的处置证据。
+- 编写 Helm / YAML 安装清单、Grafana Dashboard、ServiceMonitor、发布与回滚文档，并通过 `go test`、race、vet、lint 和最小安装脚本验证交付质量。
 
 ### Astralith｜轻量级自动化运维平台
 
 **项目题目**：基于 FastAPI 与 Ansible 的轻量级自动化运维平台设计与实现<br>
 **接触技术**：FastAPI、Ansible Runner、SQLAlchemy、SQLite、Celery、Redis、APScheduler、JWT、Vue 3、Docker Compose、AI Agent 辅助分析
 
-- 面向个人 PVE / Homelab 和中小型 Linux 服务器环境，设计并实现轻量级自动化运维平台，目标是把主机管理、连接测试、内置运维任务、定时巡检和执行日志集中到一个可演示、可复现的系统中。
-- 后端使用 FastAPI 分层组织接口、服务和数据模型，已实现登录认证、主机与主机组管理、内置运维模块元数据、任务创建、定时任务记录和任务日志展示等基础流程。
-- 远程操作统一通过 Ansible Runner 执行，Celery + Redis 负责异步任务，APScheduler 负责定时触发，SQLite 保存任务状态、每台主机执行输出和错误信息，便于后续排障和答辩演示。
-- 预留 Agent 辅助运维设计：将任务输出、错误日志和执行事件整理为结构化证据包，由 Agent 生成故障分析、Runbook 或变更建议；平台侧保留人工确认、策略校验和受控执行边界，避免让 Agent 直接操作服务器。
+- 面向个人 PVE / Homelab 和中小型 Linux 服务器环境，设计并实现轻量级自动化运维平台，覆盖登录认证、主机管理、内置运维模块、任务创建、定时巡检、执行日志保存和前端日志展示。
+- 远程操作统一通过 Ansible Runner 执行，Celery + Redis 负责异步任务，APScheduler 负责定时触发，SQLite 保存任务状态、每台主机 stdout / stderr 和原始事件，便于后续排障与答辩演示。
+- 扩展 GitOps desired-state sync、Desired / Actual diff、Apply Plan、Docker Compose Apply 记录和回滚元数据，强调人工审批、策略校验、审计日志和可回退边界。
+- 预留 Agent 辅助运维设计：将任务输出、错误日志和执行事件整理为 Evidence Pack，由 Agent 生成故障分析、Runbook 或变更建议；平台侧保留人工确认和受控执行边界。
 
 ### Ocean｜海洋生态样本与设备巡检管理平台
 
@@ -56,13 +78,10 @@
 - 参与用户、专家、视频、评论、收藏、浏览历史等模块的接口整理和前后端联调，配合完成本地运行、接口验证和问题记录。
 - 整理 Docker 化运行环境与部署说明，协助检查数据库连接、配置项、启动流程和接口可用性；项目因微信资质审核限制未正式上线，但完整经历了需求拆解、接口联调、部署验证和材料整理流程。
 
-### 钢材表面缺陷智能检测分析系统
+### 目标检测论文与项目材料支持
 
-**接触技术**：FastAPI、Vue 3、Vite、Pinia、ECharts、Python、Excel / Word 报告
-
-- 主要参与工业缺陷检测平台的运行、联调、功能验证和材料整理，实际开发参与较少，系统支持图像检测、视频检测和批量检测等使用场景。
-- 根据已有代码和文档梳理前后端启动方式，配合完成检测历史、结果查询、Excel 导出、Word 报告和统计看板等验证。
-- 整理软件说明、源代码说明与软著申请相关文档，积累项目材料归档、功能验证和交付说明撰写经验。
+- 参与 2 篇目标检测相关论文及竞赛项目材料整理，主要负责实验环境部署、依赖配置、训练环境排障、部分数据处理和文档归档，避免将算法方向作为主求职线索。
+- 参与钢材表面缺陷检测平台运行、联调、功能验证和软著材料整理，积累前后端启动、报告导出、功能验证和交付说明撰写经验。
 
 ## 开源与工程实践
 
@@ -76,17 +95,6 @@
 - 参与 TencentCloud/CubeSandbox 开源项目贡献，修改范围涉及 CubeAPI、CubeMaster 与 cubemastercli 等模块，包括参数传递、错误映射和命令输出优化等小范围改动。
 - 通过 PR、代码审查反馈、命令行验证和文档阅读熟悉开源协作流程，能在限定范围内完成修改、运行验证并回应反馈。
 
-### 自托管与 AI 工具链实践
-
-- 维护个人 PVE / Linux 自托管环境和本地开发工作站，实践服务启动、日志查看、Nginx 反向代理、面板部署、静态站点发布、Docker 服务迁移和故障记录整理。
-- 使用并维护 Hermes、OpenClaw、OpenCode 等 AI 工具链，处理过 systemd 服务、Telegram Gateway、环境变量、运行路径和版本残留等排障场景。
-- 通过自定义 skills、项目规则和博客复盘沉淀可复用工作流，将部署步骤、排障记录、服务边界和协作约定转化为后续项目可复用的检查清单。
-
-### 个人博客与开发环境维护
-
-- 维护个人技术博客 `blog.yangyus8.top`，使用 Astro + Fuwari + pnpm 构建，记录 Linux、开发工具、部署排查、项目实践与学习笔记。
-- 长期维护个人 Linux 工作站与 dotfiles，涉及 zsh、Neovim、Git/GPG、代理、容器和多语言开发环境配置。
-
 ## 奖项与证书
 
 - 2024 年辽宁省大学生智能技术应用大赛一等奖（项目：智能化在线程序测评系统）
@@ -96,6 +104,6 @@
 
 ## 自我评价
 
-- 对 Linux、部署联调、自动化运维和平台工具方向有持续兴趣，愿意从服务部署、日志排查、接口验证、文档交付和自动化脚本/工具维护等工作切入。
+- 对 Linux、DevOps / SRE、自动化运维和云原生方向有持续兴趣，能够从服务部署、日志排查、接口验证、文档交付、监控告警学习和自动化脚本 / 平台工具维护等工作切入。
 - 做事偏实践导向，重视可运行、可验证、可复现和可交接，习惯通过本地运行、接口验证、页面访问和日志结果确认修改是否有效。
 - 能够使用 AI 工具提高代码阅读、日志分析和文档整理效率，同时保持人工复核和结果验证，避免直接照搬未经验证的结论。
