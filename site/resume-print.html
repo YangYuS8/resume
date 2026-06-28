@@ -3,193 +3,73 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>杨栋森 - 运维 / DevOps / 部署联调实习简历 PDF</title>
+    <title>杨栋森 - 运维开发 / DevOps 实习简历 PDF</title>
     <style>
-      @page {
-        size: A4;
-        margin: 0;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
+      @page { size: A4; margin: 0; }
+      * { box-sizing: border-box; }
       body {
         margin: 0;
         color: #101827;
         background: #e5e7eb;
         font-family: "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", Arial, sans-serif;
-        font-size: 8.65pt;
-        line-height: 1.42;
+        font-size: 9.4pt;
+        line-height: 1.48;
       }
-
       .page {
         position: relative;
         width: 210mm;
         min-height: 297mm;
         margin: 0 auto;
-        padding: 8.8mm 10.2mm 8.3mm;
+        padding: 10mm 11mm 9mm;
         background: #ffffff;
+        page-break-after: always;
       }
-
+      .page:last-child { page-break-after: auto; }
       .hero {
-        display: block;
-        padding-bottom: 3.4mm;
-        border-bottom: 1.8px solid #1d4ed8;
-      }
-
-      h1 {
-        margin: 0 0 1.25mm;
-        color: #0f172a;
-        font-size: 21pt;
-        line-height: 1;
-        letter-spacing: 0.05em;
-      }
-
-      .role {
-        margin-bottom: 1.35mm;
-        color: #1d4ed8;
-        font-size: 9.8pt;
-        font-weight: 800;
-      }
-
-      .contact {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.05mm 3.4mm;
-        align-items: center;
-        color: #344256;
-        font-size: 7.65pt;
-      }
-
-      .summary {
-        margin: 1.75mm 0 0;
-        color: #243044;
-      }
-
-      .section {
-        margin-top: 3.05mm;
-      }
-
-      .section-title {
-        display: flex;
-        align-items: center;
-        gap: 1.55mm;
-        margin: 0 0 1.25mm;
-        color: #0f172a;
-        font-size: 10pt;
-        line-height: 1.12;
-      }
-
-      .section-title::before {
-        content: "";
-        width: 1.25mm;
-        height: 4mm;
-        border-radius: 999px;
-        background: #1d4ed8;
-      }
-
-      .split {
         display: grid;
-        grid-template-columns: 1.03fr 0.97fr;
-        gap: 4.4mm;
+        grid-template-columns: 24mm 1fr;
+        gap: 7mm;
+        align-items: start;
+        padding-bottom: 4mm;
+        border-bottom: 2px solid #1d4ed8;
       }
-
-      .item {
-        margin-top: 1.85mm;
-      }
-
-      .item:first-child {
-        margin-top: 0;
-      }
-
-      .item-head {
-        display: flex;
-        justify-content: space-between;
-        gap: 3mm;
-        margin-bottom: 0.55mm;
-        color: #0f172a;
-        font-weight: 800;
-      }
-
-      .item-head span,
-      .meta {
-        color: #556174;
-        font-size: 7.15pt;
-        font-weight: 650;
-      }
-
-      .meta {
-        margin-bottom: 0.32mm;
-      }
-
-      p {
-        margin: 0 0 0.8mm;
-      }
-
-      ul {
-        margin: 0;
-        padding-left: 3.7mm;
-      }
-
-      li {
-        margin: 0.42mm 0;
-        padding-left: 0.08mm;
-      }
-
-      strong {
-        color: #0f172a;
-        font-weight: 800;
-      }
-
-      .compact-list li {
-        margin: 0.34mm 0;
-      }
-
-      .pill-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.25mm 1.15mm;
-        margin-top: 1.45mm;
-      }
-
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.55mm 1.65mm;
-        border: 1px solid #d8e2f3;
-        border-radius: 999px;
-        background: #f7fbff;
-        color: #243044;
-        font-size: 7pt;
-        font-weight: 650;
-      }
-
-      @media screen {
-        .page {
-          margin: 8mm auto;
-          box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
-        }
-      }
-
-      @media print {
-        body {
-          background: #ffffff;
-        }
-
-        .page {
-          margin: 0;
-          box-shadow: none;
-        }
-      }
+      h1 { margin: 0 0 2mm; color: #0f172a; font-size: 25pt; line-height: 1; letter-spacing: 0.06em; }
+      .role { color: #1d4ed8; font-size: 11.2pt; font-weight: 800; }
+      .contact { display: flex; flex-wrap: wrap; gap: 1.4mm 4.2mm; align-items: center; color: #344256; font-size: 8.7pt; }
+      .portrait { justify-self: start; width: 23mm; height: 31mm; margin: 0; overflow: hidden; border: 1px solid #cbd5e1; border-radius: 1.6mm; background: #ffffff; }
+      .portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
+      .summary { margin: 3mm 0 0; color: #243044; }
+      .section { margin-top: 3.5mm; }
+      .section-title { display: flex; align-items: center; gap: 2mm; margin: 0 0 1.55mm; color: #0f172a; font-size: 11.6pt; line-height: 1.2; }
+      .section-title::before { content: ""; width: 1.5mm; height: 5mm; border-radius: 999px; background: #1d4ed8; }
+      .split { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+      .item { margin-top: 2.2mm; }
+      .item:first-child { margin-top: 0; }
+      .item-head { display: flex; justify-content: space-between; gap: 4mm; margin-bottom: 0.6mm; color: #0f172a; font-weight: 800; }
+      .item-head span, .meta { color: #556174; font-size: 8.15pt; font-weight: 650; }
+      .meta { margin-bottom: 0.9mm; }
+      p { margin: 0 0 1.35mm; }
+      ul { margin: 0; padding-left: 4.4mm; }
+      li { margin: 0.58mm 0; padding-left: 0.2mm; }
+      strong { color: #0f172a; font-weight: 800; }
+      .pill-list { display: flex; flex-wrap: wrap; gap: 1.45mm; margin-top: 1.8mm; }
+      .pill { display: inline-flex; align-items: center; padding: 0.7mm 2mm; border: 1px solid #d8e2f3; border-radius: 999px; background: #f7fbff; color: #243044; font-size: 8pt; font-weight: 650; }
+      .note { color: #4b5563; }
+      .compact-list li { margin: 0.45mm 0; }
+      .page-label { position: absolute; right: 11mm; bottom: 6.5mm; color: #94a3b8; font-size: 8pt; }
+      @media screen { .page { margin: 8mm auto; box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18); } }
+      @media print { body { background: #ffffff; } .page { margin: 0; box-shadow: none; } }
     </style>
   </head>
   <body>
     <section class="page">
       <header class="hero">
+        <figure class="portrait" aria-label="证件照">
+          <img src="assets/avatar-pdf.webp" alt="杨栋森证件照" />
+        </figure>
         <div>
           <h1>杨栋森</h1>
-          <div class="role">运维 / DevOps / 部署联调 / 平台工具实习</div>
+          <div class="role">运维开发 / DevOps / 部署联调 / 平台工具实习</div>
           <div class="contact">
             <span>手机：18683236881</span>
             <span>邮箱：yangyus8@163.com</span>
@@ -197,47 +77,83 @@
             <span>博客：blog.yangyus8.top</span>
           </div>
           <p class="summary">
-            辽宁科技大学网络工程专业 2027 届本科生，关注 Linux 运维、DevOps、部署联调和平台工具方向。熟悉 Linux 日常使用、Git/GitHub 协作、Docker Compose 多组件编排、Nginx 反向代理、服务启动验证、日志定位和接口连通性验证；能够从服务部署、环境配置、日志排查、接口联调、文档交付和自动化工具维护等工作切入。
+            辽宁科技大学网络工程专业 2027 届本科生，投递运维开发 / DevOps / 平台工具方向。熟悉 Linux 日常使用、Git/GitHub 协作、项目本地启动、Docker Compose 多组件编排、Nginx 反向代理、MySQL / Redis 基础组件联调、服务状态检查、日志定位和接口连通性验证。相比“只写业务功能”，更关注系统能否稳定启动、问题能否定位、部署步骤能否复现、日志和文档能否支撑后续交接。
           </p>
         </div>
       </header>
 
+      <section class="section split">
+        <div>
+          <h2 class="section-title">教育经历</h2>
+          <div class="item-head"><strong>辽宁科技大学｜网络工程｜本科</strong><span>2023.09 - 2027.07</span></div>
+          <p>2027 届本科在读｜CET-4｜校优秀学生三等奖学金</p>
+        </div>
+        <div>
+          <h2 class="section-title">求职方向</h2>
+          <p>运维开发实习 / DevOps 实习 / 部署联调实习 / 平台工具实习</p>
+          <p class="note">希望从 Linux、项目部署、日志排查、接口联调、文档交付和自动化工具维护方向成长。</p>
+        </div>
+      </section>
+
       <section class="section">
-        <h2 class="section-title">教育经历与技术能力</h2>
-        <div class="item-head"><strong>辽宁科技大学｜网络工程｜本科｜2027 届</strong><span>2023.09 - 2027.07</span></div>
-        <p>CET-4｜校优秀学生三等奖学金</p>
+        <h2 class="section-title">技术能力</h2>
         <ul class="compact-list">
-          <li><strong>Linux / 运维基础：</strong>Linux 日常使用、systemctl 服务状态查看、journalctl 日志定位、ss 端口检查、curl 接口连通性验证、df / free 资源查看、开发环境维护和问题记录；接触 PVE / 自托管服务器维护、1Panel 面板部署。</li>
-          <li><strong>容器与部署：</strong>Docker / Docker Compose、多组件本地运行环境整理、Nginx 反向代理、MariaDB / MySQL、Redis、Python Worker、Pages 平台部署、服务启动验证和配置检查。</li>
-          <li><strong>工程协作：</strong>Git/GitHub、README / 部署文档 / 接口说明 / 检查清单整理，配合接口验证、页面访问验证、交付材料归档和开源 PR 流程。</li>
-          <li><strong>开发基础：</strong>了解 Go / Gin / Gorm、Laravel、FastAPI、Vue、React、TypeScript 项目结构和常见接口协作方式，能阅读代码、定位配置或接口问题并配合联调。</li>
-          <li><strong>云原生学习：</strong>了解 Kubernetes、Helm、Prometheus 等云原生组件，正在通过个人项目补充 Shell 脚本、服务巡检、容器排障与监控告警实践。</li>
-          <li><strong>AI 工具使用：</strong>使用 AI 工具辅助代码阅读、日志分析、文档初稿整理和问题定位，并通过本地运行、接口验证和部署结果人工复核。</li>
+          <li><strong>Linux / 运维基础：</strong>Linux 日常使用，能使用 systemctl、journalctl、ss、curl、df、free 等命令进行服务状态、日志、端口、接口连通性和资源占用检查；接触 PVE / 自托管服务器维护。</li>
+          <li><strong>容器与部署联调：</strong>Docker / Docker Compose 基础使用，多组件本地运行环境整理；接触 Nginx 反向代理、MariaDB / MySQL、Redis、Python Worker、环境变量、端口映射和服务依赖。</li>
+          <li><strong>开发与接口协作：</strong>了解 Python / FastAPI、Go / Gin / Gorm、Laravel、Vue、React、TypeScript 等项目结构，能阅读已有代码、理解接口职责并定位配置或接口问题。</li>
+          <li><strong>自动化运维学习：</strong>通过 Astralith 学习 FastAPI + Ansible Runner 的轻量自动化运维流程，接触任务创建、定时触发、执行日志保存、主机管理和受控操作模块。</li>
+          <li><strong>工程协作与 AI 工具：</strong>熟悉 Git/GitHub、README、部署说明、接口说明和检查清单整理；使用 AI 工具辅助代码阅读、日志分析和文档初稿，并通过本地运行结果复核。</li>
         </ul>
+        <div class="pill-list">
+          <span class="pill">Linux</span><span class="pill">Docker Compose</span><span class="pill">Nginx</span><span class="pill">MySQL / Redis</span><span class="pill">FastAPI</span><span class="pill">Ansible Runner</span><span class="pill">Go / Gin</span><span class="pill">GitHub</span>
+        </div>
       </section>
 
       <section class="section">
         <h2 class="section-title">项目经历</h2>
         <article class="item">
-          <div class="item-head"><strong>Ocean｜海洋生态样本与设备巡检管理平台</strong><span>Docker Compose / Nginx / Laravel / MariaDB / Redis / Worker</span></div>
+          <div class="item-head"><strong>Astralith｜轻量级自动化运维平台</strong><span>FastAPI / Ansible Runner / Agent 辅助分析</span></div>
+          <div class="meta">FastAPI / SQLAlchemy / SQLite / Celery / Redis / APScheduler / JWT / Vue 3 / Docker Compose</div>
           <ul>
-            <li>整理 Docker Compose 多组件运行方案，编排 Nginx、Laravel、MariaDB、Redis、Python Worker 等服务，梳理端口、环境变量、数据库初始化、缓存队列和服务依赖关系，保障本地环境可启动、可访问、可复现。</li>
-            <li>配合 Nginx、Laravel 后端接口、MariaDB 数据、Redis 缓存队列和 Python Worker 进行本地运行与联调，通过日志、接口返回和页面状态定位配置与服务依赖问题。</li>
-            <li>围绕登录鉴权、巡检任务、样本登记、检测结果、异常处理、分析任务和统计看板等流程进行接口验证与页面访问验证，检查主要业务链路可用性。</li>
-            <li>维护项目概览、部署说明、接口说明、分工记录和交付检查清单，形成可复现的运行步骤和交接材料。</li>
+            <li>面向个人 PVE / Homelab 和中小型 Linux 服务器环境，设计并实现轻量级自动化运维平台，目标是把主机管理、连接测试、内置运维任务、定时巡检和执行日志集中到一个可演示、可复现的系统中。</li>
+            <li>后端使用 FastAPI 分层组织接口、服务和数据模型，已实现登录认证、主机与主机组管理、内置运维模块元数据、任务创建、定时任务记录和任务日志展示等基础流程。</li>
+            <li>远程操作统一通过 Ansible Runner 执行，Celery + Redis 负责异步任务，APScheduler 负责定时触发，SQLite 保存任务状态、每台主机执行输出和错误信息，便于后续排障和答辩演示。</li>
+            <li>预留 Agent 辅助运维设计：将任务输出、错误日志和执行事件整理为结构化证据包，由 Agent 生成故障分析、Runbook 或变更建议；平台侧保留人工确认、策略校验和受控执行边界，避免让 Agent 直接操作服务器。</li>
+          </ul>
+        </article>
+
+
+        <article class="item">
+          <div class="item-head"><strong>Ocean｜海洋生态样本与设备巡检管理平台</strong><span>部署联调 / Docker Compose / 文档整理</span></div>
+          <div class="meta">Laravel / React / MariaDB / Redis / Python Worker / Docker Compose / Nginx</div>
+          <ul>
+            <li>参与前后端分离业务系统的本地运行、部署联调和文档整理，覆盖巡检任务、样本登记、检测结果、异常处理、分析任务和统计看板等流程。</li>
+            <li>根据项目文档与配置文件梳理服务启动流程，使用 Docker Compose 编排 Nginx、Laravel、MariaDB、Redis 和 Python Worker 等组件，整理端口、环境变量、数据库初始化、缓存队列和服务依赖关系。</li>
+            <li>配合后端接口、数据库、缓存队列和异步 Worker 本地联调，通过容器状态、服务日志、HTTP 返回和页面访问结果定位配置或依赖问题，并维护部署说明、接口说明和交付检查清单。</li>
+          </ul>
+        </article>
+
+      </section>
+      <div class="page-label">1 / 2</div>
+    </section>
+
+    <section class="page">
+      <section class="section">
+        <h2 class="section-title">项目经历（续）</h2>
+        <article class="item">
+          <div class="item-head"><strong>MedKnow｜养生知识科普短视频平台后端参与</strong><span>Go / Gin / MySQL / Docker</span></div>
+          <div class="meta">Go / Gin / Gorm / MySQL / JWT / Docker / Vue 3 / UniApp</div>
+          <ul>
+            <li>参与小团队项目后端开发与联调，围绕 Go Gin + Gorm + MySQL 项目结构阅读代码、理解接口职责，并配合修正配置、参数校验、数据库连接和接口返回问题。</li>
+            <li>参与用户、专家、视频、评论、收藏、浏览历史等模块的接口整理和前后端联调，配合完成本地运行、接口验证和问题记录。</li>
+            <li>整理 Docker 化运行环境与部署说明，协助检查数据库连接、配置项、启动流程和接口可用性；项目因微信资质审核限制未正式上线，但完整经历了需求拆解、接口联调、部署验证和材料整理流程。</li>
           </ul>
         </article>
         <article class="item">
-          <div class="item-head"><strong>MedKnow｜养生知识科普短视频平台后端参与</strong><span>Go / Gin / MySQL / Docker / 接口联调</span></div>
+          <div class="item-head"><strong>钢材表面缺陷智能检测分析系统</strong><span>运行联调 / 功能验证 / 材料整理</span></div>
+          <div class="meta">FastAPI / Vue 3 / Vite / ECharts / Python / Excel 与 Word 报告</div>
           <ul>
-            <li>参与小团队项目后端开发与联调，围绕 Go Gin + Gorm + MySQL 项目结构阅读代码、理解接口职责并配合修正配置、参数和接口问题；参与用户、专家、视频、评论、收藏、浏览历史等模块的接口整理和前后端联调。</li>
-            <li>整理 Docker 化运行环境与部署说明，协助检查数据库连接、配置项、启动流程和接口可用性；项目因微信资质审核限制未上线，但完整经历了需求拆解、接口联调、部署验证和材料整理流程。</li>
-          </ul>
-        </article>
-        <article class="item">
-          <div class="item-head"><strong>Kube-Sentinel｜Kubernetes 自动处置学习项目（开发中）</strong><span>学习项目 / Go / Kubernetes / Webhook / Helm</span></div>
-          <ul>
-            <li>个人云原生学习项目，目标是理解 Kubernetes 告警接入、处置任务记录和自动化恢复流程，目前仍处于代码阅读、概念理解和本地验证阶段；已接触 Webhook 接入、处置任务对象、RBAC 权限、Helm 部署模板和事件记录等内容。</li>
+            <li>主要参与工业缺陷检测平台的运行、联调、功能验证和材料整理，实际开发参与较少；根据已有代码和文档梳理前后端启动方式，配合完成检测历史、结果查询、Excel 导出、Word 报告和统计看板等验证。</li>
           </ul>
         </article>
       </section>
@@ -245,38 +161,41 @@
       <section class="section split">
         <div>
           <h2 class="section-title">开源与工程实践</h2>
-          <article class="item">
-            <div class="item-head"><strong>lwe｜Linux Wallpaper Engine 桌面工具</strong><span>GitHub Releases / AUR / 文档</span></div>
-            <ul>
-              <li>个人维护的 Linux 桌面开源项目，维护 GitHub Releases、AUR 包、中英文在线文档和用户反馈记录，接触 Linux 桌面兼容、打包发布、版本说明和开源项目维护流程。</li>
-            </ul>
-          </article>
-          <article class="item">
-            <div class="item-head"><strong>CubeSandbox 开源贡献</strong><span>GitHub PR / CLI 验证</span></div>
-            <ul>
-              <li>参与 TencentCloud/CubeSandbox 小范围开源贡献，修改参数传递、错误映射和命令输出优化等内容，通过 PR、审查反馈、命令行验证和文档阅读熟悉开源协作流程。</li>
-            </ul>
-          </article>
-          <article class="item">
-            <div class="item-head"><strong>自托管与开发环境维护</strong><span>PVE / Linux / systemd / dotfiles</span></div>
-            <ul>
-              <li>维护个人 PVE / Linux 自托管环境、技术博客和本地工作站，实践服务启动、日志定位、Nginx 反向代理、面板部署、静态站点发布、故障记录整理和 dotfiles 维护。</li>
-            </ul>
-          </article>
+          <ul class="compact-list">
+            <li><strong>lwe 开源软件：</strong>个人维护的 Linux 桌面应用，用于浏览、管理和应用 Wallpaper Engine 内容；维护 AUR 包、GitHub Releases、中英文在线文档和用户反馈记录。</li>
+            <li><strong>CubeSandbox 开源贡献：</strong>参与 TencentCloud/CubeSandbox 小范围开源贡献，修改参数传递、错误映射和命令输出优化等内容，通过 PR、审查反馈和命令行验证熟悉开源协作流程。</li>
+            <li><strong>自托管与开发环境：</strong>维护个人 PVE / Linux 自托管环境、技术博客和本地工作站，实践服务启动、日志定位、Nginx 反向代理、Docker 服务迁移和故障记录整理。</li>
+          </ul>
         </div>
         <div>
-          <h2 class="section-title">奖项与证书</h2>
+          <h2 class="section-title">AI 辅助工程实践</h2>
           <ul class="compact-list">
-            <li>2024 年辽宁省大学生智能技术应用大赛一等奖。</li>
-            <li>2024 年全球校园人工智能算法精英大赛东北赛区一等奖、全国总决赛三等奖。</li>
-            <li>2024 年辽宁省“中软国际--卓越杯”大数据挑战赛二等奖；2025 年辽宁省 iCAN 创新创业大赛二等奖。</li>
-            <li>重视可运行、可验证、可复现和可交接，习惯通过本地运行、接口验证、页面访问和日志结果确认修改是否有效。</li>
+            <li>在个人项目、开源贡献和简历/博客维护中使用 AI 工具辅助需求拆解、方案对比、代码阅读、命令生成、文档初稿和测试建议。</li>
+            <li>对 AI 输出保持审慎态度：不直接照搬未验证结论，重点通过本地运行、测试结果、页面访问和日志输出来确认修改有效。</li>
+            <li>在项目交付过程中整理 README、部署步骤、故障记录和检查清单，提高环境复现与交接效率。</li>
           </ul>
-          <div class="pill-list">
-            <span class="pill">Linux</span><span class="pill">Docker Compose</span><span class="pill">Nginx</span><span class="pill">MariaDB/MySQL</span><span class="pill">Redis</span><span class="pill">Go/Gin</span><span class="pill">Laravel</span><span class="pill">GitHub PR</span><span class="pill">Kubernetes 学习中</span>
-          </div>
         </div>
       </section>
+
+      <section class="section">
+        <h2 class="section-title">奖项与证书</h2>
+        <ul>
+          <li>2024 年辽宁省大学生智能技术应用大赛一等奖（项目：智能化在线程序测评系统）。</li>
+          <li>2024 年第六届全球校园人工智能算法精英大赛东北赛区一等奖、全国总决赛三等奖（赛题：超声乳腺影像的 BIRADS 分类及特征识别）。</li>
+          <li>2024 年辽宁省“中软国际--卓越杯”大数据挑战赛二等奖；2025 年辽宁省 iCAN 创新创业大赛二等奖。</li>
+          <li>辽宁科技大学优秀学生三等奖学金；CET-4。</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">自我评价</h2>
+        <ul class="compact-list">
+          <li>对 Linux、部署联调、自动化运维和平台工具方向有持续兴趣，愿意从服务部署、日志排查、接口验证、文档交付和自动化脚本/工具维护等工作切入。</li>
+          <li>实践导向较强，重视可运行、可验证、可复现和可交接，习惯通过本地运行、接口验证、页面访问和日志结果确认修改是否有效。</li>
+          <li>能够使用 AI 工具提高代码阅读、日志分析和文档整理效率，同时保持人工复核和结果验证。</li>
+        </ul>
+      </section>
+      <div class="page-label">2 / 2</div>
     </section>
   </body>
 </html>
