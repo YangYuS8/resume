@@ -11,6 +11,7 @@
 - `site/styles.css`：页面样式。
 - `site/resume.pdf`：网页提供下载的 PDF 投递版产物。
 - `site/portfolio-devops.html` / `site/devops-sre-portfolio.pdf`：DevOps / SRE / 运维开发项目作品集源文件与 PDF。
+- `site/certificates-pdf.html` / `site/certificates.pdf`：获奖证书合集源文件与 PDF。
 - `reactive-resume.json` / `reactive-resume-import.json`：旧版 Reactive Resume 数据，仅作参考。
 
 ## 本地查看
@@ -30,6 +31,7 @@ http://127.0.0.1:8000
 ```bash
 node scripts/build-pdf.js
 node scripts/build-portfolio-pdf.js
+node scripts/build-certificates-pdf.js
 pdfinfo site/resume.pdf
 pdfinfo site/devops-sre-portfolio.pdf
 ```

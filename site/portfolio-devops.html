@@ -12,15 +12,15 @@
       background: #e5e7eb;
       color: #111827;
       font-family: "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", Arial, sans-serif;
-      font-size: 10.2pt;
-      line-height: 1.62;
+      font-size: 9.8pt;
+      line-height: 1.52;
     }
     .page {
       position: relative;
       width: 210mm;
       min-height: 297mm;
       margin: 0 auto;
-      padding: 16mm 17mm 14mm;
+      padding: 13.5mm 16mm 12mm;
       background: #fff;
       page-break-after: always;
       overflow: hidden;
@@ -29,12 +29,12 @@
     @media screen { .page { margin: 8mm auto; box-shadow: 0 18px 50px rgba(15,23,42,.18); } }
     @media print { body { background: #fff; } .page { margin: 0; box-shadow: none; } }
     h1,h2,h3,p,ul,ol { margin-top: 0; }
-    h1 { font-size: 27pt; line-height: 1.18; color: #0f172a; letter-spacing: .02em; margin-bottom: 4mm; }
-    h2 { font-size: 17pt; line-height: 1.25; color: #0f172a; margin-bottom: 4mm; padding-bottom: 1.8mm; border-bottom: 2px solid #2563eb; }
-    h3 { font-size: 12.4pt; color: #0f172a; margin: 4mm 0 1.4mm; }
-    p { margin-bottom: 2.1mm; }
-    ul { padding-left: 5mm; margin-bottom: 2.8mm; }
-    li { margin: 1.1mm 0; }
+    h1 { font-size: 26pt; line-height: 1.14; color: #0f172a; letter-spacing: .02em; margin-bottom: 3mm; }
+    h2 { font-size: 16.4pt; line-height: 1.2; color: #0f172a; margin-bottom: 3mm; padding-bottom: 1.4mm; border-bottom: 2px solid #2563eb; }
+    h3 { font-size: 12pt; color: #0f172a; margin: 3mm 0 1mm; }
+    p { margin-bottom: 1.6mm; }
+    ul { padding-left: 4.6mm; margin-bottom: 2mm; }
+    li { margin: .75mm 0; }
     strong { color: #0f172a; font-weight: 800; }
     .kicker { color: #2563eb; font-weight: 800; letter-spacing: .06em; margin-bottom: 2mm; }
     .subtitle { font-size: 13.2pt; color: #334155; margin-bottom: 7mm; }
@@ -48,20 +48,29 @@
     .toc-row { display: grid; grid-template-columns: 9mm 1fr 10mm; gap: 3mm; align-items: baseline; padding: 2.2mm 0; border-bottom: 1px dashed #cbd5e1; }
     .toc-no { color: #2563eb; font-weight: 900; }
     .toc-page { text-align: right; color: #64748b; }
-    .section-lead { color: #334155; font-size: 10.6pt; margin-bottom: 4mm; }
+    .section-lead { color: #334155; font-size: 10.1pt; margin-bottom: 2.6mm; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5.6mm; }
     .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.5mm; }
     .info { border-left: 3px solid #2563eb; padding: 2.4mm 3.4mm; background: #f8fafc; margin: 3mm 0; }
-    .project-meta { display: grid; grid-template-columns: 25mm 1fr; gap: 2mm; font-size: 9.4pt; color: #334155; margin-bottom: 3mm; }
+    .project-meta { display: grid; grid-template-columns: 24mm 1fr; gap: 1.4mm; font-size: 9pt; color: #334155; margin-bottom: 2mm; }
     .project-meta div:nth-child(odd) { font-weight: 800; color: #0f172a; }
     .compact li { margin: .8mm 0; }
-    .table { width: 100%; border-collapse: collapse; margin: 2.5mm 0 4mm; font-size: 9.4pt; }
-    .table th, .table td { border: 1px solid #dbeafe; padding: 2mm 2.4mm; vertical-align: top; }
+    .table { width: 100%; border-collapse: collapse; margin: 2mm 0 2.8mm; font-size: 8.9pt; }
+    .table th, .table td { border: 1px solid #dbeafe; padding: 1.5mm 2mm; vertical-align: top; }
     .table th { background: #eff6ff; color: #1e3a8a; text-align: left; }
-    .page-label { position: absolute; right: 17mm; bottom: 8mm; color: #94a3b8; font-size: 8.5pt; }
-    .footer-note { position: absolute; left: 17mm; bottom: 8mm; color: #94a3b8; font-size: 8.5pt; }
+    .page-label { position: absolute; right: 16mm; bottom: 6mm; color: #94a3b8; font-size: 8.2pt; }
+    .footer-note { position: absolute; left: 16mm; bottom: 6mm; color: #94a3b8; font-size: 8.2pt; }
     .quote { font-size: 12pt; color: #1e293b; border-left: 4px solid #2563eb; padding-left: 4mm; margin: 5mm 0; }
     .small { font-size: 9pt; }
+    .verify { border: 1px solid #bfdbfe; background: #eff6ff; color: #1e3a8a; border-radius: 2mm; padding: 1.4mm 2mm; margin: 1.8mm 0 2.2mm; font-size: 8.6pt; }
+    .verify strong { color: #1d4ed8; }
+    .status-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2mm; margin: 1.5mm 0 2mm; }
+    .status-card { border: 1px solid #dbeafe; background: #f8fafc; border-radius: 2mm; padding: 1.7mm; font-size: 8.4pt; }
+    .status-card b { display: block; color: #1e3a8a; margin-bottom: .8mm; }
+    .arch { border: 1px solid #dbeafe; border-radius: 3mm; padding: 2.2mm; margin: 1.8mm 0 2.2mm; background: #fbfdff; }
+    .arch-row { display: grid; grid-template-columns: 1fr 7mm 1fr 7mm 1fr; align-items: center; gap: 1.4mm; margin: 1.2mm 0; }
+    .arch-box { border: 1px solid #93c5fd; background: #eff6ff; color: #1e3a8a; border-radius: 2mm; padding: 1.5mm; text-align: center; font-weight: 800; font-size: 8.4pt; }
+    .arch-arrow { color: #2563eb; text-align: center; font-weight: 900; }
   </style>
 </head>
 <body>
@@ -78,6 +87,7 @@
         <p>本作品集用于补充一页简历，重点展示在个人 Homelab、Kubernetes 工具、自动化运维平台、实习项目和团队项目中的工程实践。内容围绕“能把项目跑起来、能定位问题、能整理部署步骤、能把联调过程复现给他人”展开。</p>
         <p>表述保持克制：不把学习项目包装成大型商业系统，也不夸大为独立负责完整平台；重点说明真实参与的部署、联调、配置排障、接口验证、文档整理和工程交付工作。</p>
         <div class="quote">关注点：服务能否稳定启动，链路能否验证，问题能否定位，部署步骤能否复现，交接材料是否可用。</div>
+        <div class="verify"><strong>统一可验证入口：</strong>在线简历 https://yds.nesoriel.cn；公开代码与补充材料以 GitHub / 博客 / 项目仓库为准。</div>
       </div>
       <div class="card">
         <h3>能力关键词</h3>
@@ -101,8 +111,14 @@
     <h2>01｜个人 Homelab 运维与服务迁移实践</h2>
     <p class="section-lead">以个人 PVE Homelab 和多台 Linux 服务器为长期实践环境，围绕服务部署、远程访问、容器编排、反向代理和故障记录沉淀经验。</p>
     <div class="project-meta"><div>角色</div><div>项目负责人 / 运维实践</div><div>技术栈</div><div>PVE、Debian、Docker Compose、Dockge、Nginx / OpenResty、Tailscale、WireGuard / OpenWrt、1Panel、Git</div><div>重点能力</div><div>Linux 服务维护、容器化部署、远程访问配置、反向代理、故障排查、部署文档整理</div></div>
+    <div class="verify"><strong>可验证材料：</strong>在线简历 https://yds.nesoriel.cn；个人博客 blog.yangyus8.top 中的 Homelab、Docker Compose、服务器迁移与排障记录。</div>
     <h3>背景与目标</h3>
     <p>早期环境中，PVE 宿主机同时承载 Docker、面板、媒体、代理和反向代理服务，服务边界不够清晰，排查问题时容易混淆宿主机、容器、网关和业务服务责任。后续将环境逐步整理为“PVE 宿主机 / infra-docker-01 / net-gateway-01 / 业务 VM”的分层结构。</p>
+    <h3>简化架构图</h3>
+    <div class="arch">
+      <div class="arch-row"><div class="arch-box">PVE 宿主机</div><div class="arch-arrow">→</div><div class="arch-box">Linux VM / Docker 服务机</div><div class="arch-arrow">→</div><div class="arch-box">Docker Compose Stacks</div></div>
+      <div class="arch-row"><div class="arch-box">远程访问入口</div><div class="arch-arrow">→</div><div class="arch-box">Nginx / OpenResty</div><div class="arch-arrow">↔</div><div class="arch-box">Tailscale / WireGuard 链路</div></div>
+    </div>
     <h3>主要实践</h3>
     <ul>
       <li>维护 Linux 虚拟机、Docker 服务机、代理网关和多类自托管服务，作为 DevOps、SRE 与云原生技术学习的长期实验环境。</li>
@@ -117,38 +133,46 @@
   </section>
 
   <section class="page">
-    <h2>02｜Kube-Sentinel：Kubernetes 夜间值班哨兵工具</h2>
-    <p class="section-lead">面向 Kubernetes 夜间值班场景的轻量哨兵工具，关注告警接入、处置边界、审计证据和人工接管，而不是盲目追求全自动修复。</p>
-    <div class="project-meta"><div>角色</div><div>开发者 / 云原生运维实践</div><div>技术栈</div><div>Go、Kubernetes、Controller Runtime、CRD、Helm、Alertmanager、Prometheus、Grafana、Telegram Bot</div><div>重点能力</div><div>Kubernetes 控制器、告警接入、Prometheus 指标、Helm 安装、最小化自动处置设计</div></div>
+    <h2>02｜Kube-Sentinel：Kubernetes 告警处置工具原型</h2>
+    <p class="section-lead">面向 Kubernetes 夜间值班场景的告警处置工具原型，重点验证 Alertmanager 接入、CRD / 控制器思路、Prometheus 指标、Helm 部署和自动化风险边界；不表述为已成熟落地的生产级平台。</p>
+    <div class="project-meta"><div>角色</div><div>开发者 / 云原生运维原型实践</div><div>技术栈</div><div>Go、Kubernetes、Controller Runtime、CRD、Helm、Alertmanager、Prometheus、Grafana、Telegram Bot</div><div>重点能力</div><div>Kubernetes 控制器原型、告警接入、Prometheus 指标、Helm 安装、最小化自动处置设计</div></div>
+    <div class="verify"><strong>可验证材料：</strong>GitHub：https://github.com/YangYuS8/kube-sentinel；在线简历：https://yds.nesoriel.cn</div>
     <h3>设计思路</h3>
-    <p>工具接收 Alertmanager Webhook 告警后映射为 <code>HealingRequest</code>，再围绕 Deployment L1 自动处置设计有限、可解释、可人工接管的流程。设计重点不是让脚本无限制地修改集群，而是在安全边界内形成从告警、分诊、最小处置到审计记录的闭环。</p>
+    <p>当前定位为原型验证：工具设计为接收 Alertmanager Webhook 告警后映射为 <code>HealingRequest</code>，再围绕 Deployment L1 处置设计有限、可解释、可人工接管的流程。设计重点不是让脚本无限制地修改集群，而是在安全边界内验证从告警、分诊、最小处置到审计记录的闭环思路。</p>
     <h3>关键工作</h3>
     <ul>
-      <li>实现 Alertmanager Webhook 到 Kubernetes 自定义资源的接入流程，形成统一的告警处理入口。</li>
-      <li>围绕 Deployment 自动处置加入维护窗口、速率限制、爆炸半径控制、熔断和写前快照校验，降低误操作风险。</li>
-      <li>输出 Kubernetes Event、结构化审计、Prometheus 指标和 Telegram incident card，为值班人员提供可解释的处置证据。</li>
-      <li>维护 Helm / YAML 安装清单、Grafana Dashboard、ServiceMonitor、发布与回滚文档，并通过测试、静态检查和最小安装脚本验证交付质量。</li>
+      <li>原型验证 Alertmanager Webhook 到 Kubernetes 自定义资源的接入流程，形成统一告警入口的设计雏形。</li>
+      <li>围绕 Deployment 处置设计维护窗口、速率限制、爆炸半径控制、熔断和写前快照校验，用于说明自动化风险边界。</li>
+      <li>设计 Kubernetes Event、结构化审计、Prometheus 指标和 Telegram incident card，用于保留可解释的处置证据。</li>
+      <li>整理 Helm / YAML 安装清单、Grafana Dashboard、ServiceMonitor、发布与回滚文档，并通过本地测试、静态检查和最小安装脚本做原型验证。</li>
     </ul>
     <h3>运维视角总结</h3>
-    <table class="table"><tr><th>模块</th><th>实践内容</th><th>体现能力</th></tr><tr><td>告警接入</td><td>Alertmanager Webhook → HealingRequest</td><td>理解监控告警链路和事件建模</td></tr><tr><td>安全边界</td><td>维护窗口、限速、熔断、快照校验</td><td>避免自动化工具扩大事故影响</td></tr><tr><td>可观测与审计</td><td>Event、审计日志、Prometheus 指标、通知卡片</td><td>为人工接管和复盘保留证据</td></tr><tr><td>交付验证</td><td>Helm/YAML、Dashboard、ServiceMonitor、回滚文档</td><td>具备部署与交付意识</td></tr></table>
-    <div class="info"><strong>投递关联：</strong>可用于说明 Kubernetes 基础、控制器实践、监控告警理解，以及对自动化运维风险边界的认识。</div>
-    <div class="footer-note">Kube-Sentinel｜Kubernetes 夜间值班哨兵工具</div><div class="page-label">3 / 7</div>
+    <table class="table"><tr><th>模块</th><th>实践内容</th><th>体现能力</th></tr><tr><td>告警接入</td><td>Alertmanager Webhook → HealingRequest</td><td>理解监控告警链路和事件建模</td></tr><tr><td>安全边界</td><td>维护窗口、限速、熔断、快照校验</td><td>避免自动化工具扩大事故影响</td></tr><tr><td>可观测与审计</td><td>Event、审计日志、Prometheus 指标、通知卡片</td><td>为人工接管和复盘保留证据</td></tr><tr><td>交付验证</td><td>Helm/YAML、Dashboard、ServiceMonitor、回滚文档（原型验证）</td><td>具备部署与交付意识</td></tr></table>
+    <div class="info"><strong>投递关联：</strong>可用于说明 Kubernetes 基础、控制器原型实践、监控告警理解，以及对自动化运维风险边界的认识。</div>
+    <div class="footer-note">Kube-Sentinel｜Kubernetes 告警处置工具原型</div><div class="page-label">3 / 7</div>
   </section>
 
   <section class="page">
     <h2>03｜Astralith：轻量级自动化运维平台</h2>
-    <p class="section-lead">面向个人 PVE / Homelab 和中小型 Linux 服务器环境的自动化运维平台，强调任务执行、日志留存、定时巡检、人工审批和可回退边界。</p>
-    <div class="project-meta"><div>项目题目</div><div>基于 FastAPI 与 Ansible 的轻量级自动化运维平台设计与实现</div><div>技术栈</div><div>FastAPI、Ansible Runner、SQLAlchemy、SQLite、Celery、Redis、APScheduler、JWT、Vue 3、Docker Compose、AI Agent 辅助分析</div><div>重点能力</div><div>自动化运维平台设计、异步任务、定时巡检、执行日志、Docker Compose 部署、故障分析材料整理</div></div>
+    <p class="section-lead">面向个人 PVE / Homelab 和中小型 Linux 服务器环境的轻量级自动化运维平台。当前以毕业设计和原型开发为边界，强调模块拆分、主机管理、任务执行、日志留存与后续扩展规划。</p>
+    <div class="project-meta"><div>项目题目</div><div>基于 FastAPI 与 Ansible 的轻量级自动化运维平台设计与实现</div><div>技术栈</div><div>FastAPI、Ansible Runner、SQLAlchemy、SQLite、Celery、Redis、APScheduler、JWT、Vue 3、Docker Compose、AI Agent 辅助分析</div><div>重点能力</div><div>自动化运维平台设计、异步任务、执行日志、Docker Compose 部署规划、故障分析材料整理</div></div>
+    <div class="verify"><strong>可验证材料：</strong>GitHub：https://github.com/Nesoriel/astralith；在线简历：https://yds.nesoriel.cn</div>
+    <h3>进度边界</h3>
+    <div class="status-grid">
+      <div class="status-card"><b>已完成</b>项目定位、模块拆分、技术路线梳理、部分后端原型设计。</div>
+      <div class="status-card"><b>开发中</b>主机管理、任务执行、执行日志留存、前端日志展示。</div>
+      <div class="status-card"><b>规划中</b>GitOps diff、Apply Plan、Docker Compose 管理、AI Evidence Pack。</div>
+    </div>
     <h3>功能范围</h3>
     <ul>
-      <li>覆盖登录认证、主机管理、内置运维模块、任务创建、定时巡检、执行日志保存和前端日志展示。</li>
-      <li>远程操作统一通过 Ansible Runner 执行，Celery + Redis 负责异步任务，APScheduler 负责定时触发。</li>
-      <li>SQLite 保存任务状态、每台主机 stdout / stderr 和原始事件，便于后续排障、复盘和演示。</li>
-      <li>扩展 GitOps desired-state sync、Desired / Actual diff、Apply Plan、Docker Compose Apply 记录和回滚元数据。</li>
+      <li>已完成：明确登录认证、主机管理、内置运维模块、任务创建、定时巡检和日志展示等模块边界。</li>
+      <li>开发中：远程操作计划统一通过 Ansible Runner 执行，Celery + Redis 处理异步任务，APScheduler 触发定时任务。</li>
+      <li>开发中：设计 SQLite 保存任务状态、每台主机 stdout / stderr 和原始事件，便于后续排障、复盘和演示。</li>
+      <li>规划中：GitOps desired-state sync、Desired / Actual diff、Apply Plan、Docker Compose Apply 记录和回滚元数据。</li>
     </ul>
     <h3>工程取舍</h3>
-    <p>平台侧强调“受控执行”而不是把 Agent 或脚本直接放到高风险路径。Agent 辅助运维能力用于整理任务输出、错误日志和执行事件，形成 Evidence Pack，再生成故障分析、Runbook 或变更建议；真正执行仍保留人工确认、策略校验、审计日志和回退边界。</p>
-    <table class="table"><tr><th>能力点</th><th>项目体现</th></tr><tr><td>自动化执行</td><td>Ansible Runner 封装远程操作，统一任务入口和输出结构。</td></tr><tr><td>异步与定时</td><td>Celery + Redis 处理长任务，APScheduler 触发周期巡检。</td></tr><tr><td>日志与审计</td><td>保存 stdout、stderr、任务状态和原始事件，便于排查。</td></tr><tr><td>部署联调</td><td>使用 Docker Compose 整理运行环境和组件依赖。</td></tr><tr><td>风险控制</td><td>强调人工审批、策略校验和可回退，不夸大为无人值守。</td></tr></table>
+    <p>平台侧强调“受控执行”而不是把 Agent 或脚本直接放到高风险路径。AI Evidence Pack 等能力目前作为规划方向，用于整理任务输出、错误日志和执行事件，再辅助生成故障分析、Runbook 或变更建议；真正执行仍保留人工确认、策略校验、审计日志和回退边界。</p>
+    <table class="table"><tr><th>能力点</th><th>项目体现</th></tr><tr><td>自动化执行</td><td>开发中：以 Ansible Runner 统一远程操作入口和输出结构。</td></tr><tr><td>异步与定时</td><td>开发中：Celery + Redis 处理长任务，APScheduler 触发周期巡检。</td></tr><tr><td>日志与审计</td><td>开发中：保存 stdout、stderr、任务状态和原始事件，便于排查。</td></tr><tr><td>部署联调</td><td>规划中：使用 Docker Compose 整理运行环境和组件依赖。</td></tr><tr><td>风险控制</td><td>设计中：强调人工审批、策略校验和可回退，不夸大为无人值守。</td></tr></table>
     <div class="info"><strong>投递关联：</strong>适合展示自动化运维、任务平台、日志留存、Docker Compose 部署和 AI 辅助运维的工程理解。</div>
     <div class="footer-note">Astralith｜轻量级自动化运维平台</div><div class="page-label">4 / 7</div>
   </section>
@@ -157,6 +181,7 @@
     <h2>04｜MedKnow：梦溪比特 Go 后端实习项目</h2>
     <p class="section-lead">梦溪比特（鞍山）软件信息技术有限公司实习项目。项目为养生知识科普短视频平台，包含用户、专家、视频、评论、收藏、浏览历史等业务模块。</p>
     <div class="project-meta"><div>实习时间</div><div>2025.09 - 2026.03</div><div>职位</div><div>Go 后端开发实习生 / 后端开发实习生</div><div>技术栈</div><div>Go、Gin、Gorm、MySQL、Docker、Git、接口联调、服务部署、问题排查、文档整理</div></div>
+    <div class="verify"><strong>可验证材料：</strong>项目仓库：https://github.com/NotSleeply/MedKnow；在线简历：https://yds.nesoriel.cn</div>
     <h3>参与内容</h3>
     <ul>
       <li>参与后端项目结构梳理，理解用户、专家、视频、评论、收藏、浏览历史等模块的数据关系与接口调用流程。</li>
@@ -175,6 +200,7 @@
     <h2>05｜Ocean：多组件业务系统部署联调实践</h2>
     <p class="section-lead">海洋生态样本与设备巡检管理平台，覆盖巡检任务、样本登记、检测结果、异常处理、分析任务和统计看板等流程。作品集重点展示本地运行、部署联调和文档整理能力。</p>
     <div class="project-meta"><div>技术栈</div><div>Docker Compose、Nginx、Laravel、MariaDB、Redis、Python Worker、React、TypeScript</div><div>参与重点</div><div>多组件启动、服务依赖整理、数据库初始化、缓存队列、异步 Worker、HTTP 返回验证、交付说明</div></div>
+    <div class="verify"><strong>可验证材料：</strong>GitHub：https://github.com/YangYuS8/ocean；在线简历：https://yds.nesoriel.cn</div>
     <h3>主要工作</h3>
     <ul>
       <li>参与前后端分离业务系统的本地运行、部署联调和文档整理，围绕后端接口、数据库、缓存队列和异步 Worker 验证链路。</li>
@@ -196,8 +222,8 @@
       <div>
         <h3>开源与工程实践</h3>
         <ul class="compact">
-          <li><strong>lwe Linux 桌面工具：</strong>个人维护的 Linux 桌面开源项目，用于浏览、管理和应用 Wallpaper Engine 内容；维护 GitHub Releases、AUR 包、中英文在线文档和用户反馈记录。</li>
-          <li><strong>CubeSandbox 开源贡献：</strong>参与 TencentCloud/CubeSandbox 小范围开源贡献，修改参数传递、错误映射和命令输出优化等内容，通过 PR、审查反馈和命令行验证熟悉协作流程。</li>
+          <li><strong>lwe Linux 桌面工具：</strong>个人维护的 Linux 桌面开源项目，用于浏览、管理和应用 Wallpaper Engine 内容；维护 GitHub Releases、AUR 包、中英文在线文档和用户反馈记录。可验证材料：GitHub https://github.com/YangYuS8/lwe。</li>
+          <li><strong>CubeSandbox 开源贡献：</strong>参与 TencentCloud/CubeSandbox 小范围代码阅读、修改验证和协作练习；因本作品集不展开具体 PR 编号，仅作为开源协作流程补充材料保守呈现。</li>
           <li><strong>目标检测项目材料支持：</strong>参与实验环境部署、依赖配置、训练环境排障、部分数据处理和文档归档，不将算法方向作为主求职线索。</li>
         </ul>
       </div>
@@ -214,7 +240,7 @@
     </div>
     <h3>综合能力映射</h3>
     <table class="table"><tr><th>能力方向</th><th>支撑经历</th><th>投递表达</th></tr><tr><td>Linux / 服务运维</td><td>Homelab、服务器维护、博客复盘</td><td>能从服务状态、日志、端口、资源占用检查切入</td></tr><tr><td>容器与部署</td><td>Homelab、Ocean、MedKnow、Astralith</td><td>能整理 Compose、环境变量、服务依赖和部署说明</td></tr><tr><td>云原生学习</td><td>Kube-Sentinel、Kubernetes / Helm / Prometheus 实践</td><td>了解 K8s 资源、告警链路和受控自动化思路</td></tr><tr><td>接口联调与排障</td><td>MedKnow、Ocean</td><td>能配合前后端验证参数、返回、数据库连接和业务流程</td></tr><tr><td>文档与交接</td><td>所有项目</td><td>重视可复现、可验证、可交接，而不是只停留在“能跑一次”</td></tr></table>
-    <div class="info"><strong>求职方向：</strong>DevOps 实习 / SRE 实习 / 运维开发实习 / 云原生运维实习 / 部署联调实习。在线简历：<strong>https://yds.nesoriel.cn</strong></div>
+    <div class="info"><strong>可验证材料：</strong>在线简历：<strong>https://yds.nesoriel.cn</strong>；GitHub：github.com/YangYuS8。<br><strong>求职方向：</strong>DevOps 实习 / SRE 实习 / 运维开发实习 / 云原生运维实习 / 部署联调实习。</div>
     <div class="footer-note">补充实践与可承担工作</div><div class="page-label">7 / 7</div>
   </section>
 </body>
